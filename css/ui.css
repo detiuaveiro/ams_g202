@@ -476,12 +476,6 @@ p:last-child {
 .section-footer ul li {
   margin-bottom: 5px;
 }
-.section-footer ul a {
-  color: inherit;
-}
-.section-footer ul a:hover {
-  color: #3167eb;
-}
 .section-footer .logo-footer {
   height: 40px;
 }
@@ -1501,7 +1495,14 @@ a[class*=card]:hover .title {
 
 /* ================ CUSTOM CSS ================== */
 
+a{
+  color: inherit;
+  transition: 0.2s ease-in-out;
+}
 
+a:hover{
+  color: #00b517;
+}
 
 .nav-link {
   position: relative;
