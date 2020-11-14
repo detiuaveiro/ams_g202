@@ -2,8 +2,9 @@
 
 // jquery ready start
 $(document).ready(function() {
-	// jQuery code
-
+    // jQuery code
+    
+    new universalParallax().init({speed: 5.0});
 
     /* ///////////////////////////////////////
 
