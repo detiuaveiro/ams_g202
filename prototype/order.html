@@ -140,19 +140,19 @@
 		<div class="row">
 			<div class="form-group col-sm-6">
 				<label>Primeiro nome</label>
-				<input type="text" placeholder="Primeiro nome" class="form-control">
+				<input type="text" placeholder="Primeiro nome" name="firstname" class="form-control">
 			</div>
 			<div class="form-group col-sm-6">
 				<label>Último nome</label>
-				<input type="text" placeholder="Último nome" class="form-control">
+				<input type="text" placeholder="Último nome" name="surname" class="form-control">
 			</div>
 			<div class="form-group col-sm-6">
 				<label>Telemóvel</label>
-				<input type="text" placeholder="Telemóvel" class="form-control">
+				<input type="text" maxlength="9" placeholder="Número de telemóvel" name="phone_number" class="form-control">
 			</div>
 			<div class="form-group col-sm-6">
 				<label>Email</label>
-				<input type="email" placeholder="Email" class="form-control">
+				<input type="email" placeholder="Email" name="email" class="form-control">
 			</div>
 		</div> <!-- row.// -->	
 	</form>
@@ -275,7 +275,7 @@
 				<p class="alert alert-info">Este método de pagamento necessita que tenha instalado a aplicação MB Way associada a um cartão bancário válido.</p>
 				<p class="text-muted">Digite o seu número de telemóvel e receberá uma notificação no seu telemóvel com os detalhes do seu pedido. Apenas precisa de confirmar e validar a compra através de um PIN ou impressão digital.</p>
 				<form class="form-inline">
-					<input type="number" maxlength="9" class="form-control mr-3" style="max-width: 250px" placeholder="Número de telemóvel" name="phone_number">
+					<input type="text" maxlength="9" class="form-control mr-3" style="max-width: 250px" placeholder="Número de telemóvel" name="phone_number">
 					<button class="btn btn btn-success">Enviar notificação</button>
 				</form>
 			</div> <!-- card body .// -->
@@ -324,8 +324,8 @@
 				<p class="alert alert-info">Esta compra aparecerá no extrato do seu cartão de crédito como "PAGAMENTO *ECOMARKET".</p>
 				<form class="form-inline">
 					<input type="text" class="form-control mr-2" placeholder="XXXX-XXXX-XXXX-XXXX" name="card_number">
-					<input type="text" class="form-control mr-2" style="width: 100px" placeholder="MM/AA" name="expiration_date">
-					<input type="number" maxlength="3" class="form-control mr-2" style="width: 100px" placeholder="CVC" name="cvc">
+					<input type="text" class="form-control mr-2" style="width: 100px" placeholder="MM/AA" name="card_expiration_date">
+					<input type="number" maxlength="3" class="form-control mr-2" style="width: 100px" placeholder="CVC" name="card_cvc">
 					<button class="btn btn btn-success">Validar cartão</button>
 				</form>
 			</div> <!-- card body .// -->
@@ -346,12 +346,12 @@
 					<dd>2</dd>
 				</dl>
 				<dl class="dlist-align">
-				  <dt class="text-muted">Entrega:</dt>
-				  <dd>Normal</dd>
+				  	<dt class="text-muted">Entrega:</dt>
+				  	<dd>Normal</dd>
 				</dl>
 				<dl class="dlist-align">
-				  <dt class="text-muted">Pagamento:</dt>
-				  <dd>Paypal</dd>
+				  	<dt class="text-muted">Pagamento:</dt>
+				  	<dd>PayPal</dd>
 				</dl>
 				<hr>
 				<dl class="dlist-align">
@@ -359,8 +359,8 @@
 					<dd class="text-danger">5,47€</dd>
 				</dl>
 				<dl class="dlist-align">
-				  <dt>Desconto:</dt>
-				  <dd class="text-success">-0,94€</dd>
+				  	<dt>Desconto:</dt>
+				  	<dd class="text-success">-0,94€</dd>
 				</dl>
 				<dl class="dlist-align">
 					<dt>Envio:</dt>
@@ -370,7 +370,7 @@
 				<dl class="dlist-align">
 					<dt class="h5 mb-0">A pagar:</dt>
 					<dd class="h5 mb-0 font-weight-bolder">7,53€</dd>
-				  </dl>
+				</dl>
 				<hr>
 				<p class="small mb-3 text-muted">Por favor confirme todos os dados introduzidos antes de confirmar o pedido.</p>
 				<a href="#" class="btn btn-primary btn-block">Confirmar pedido <i class="fas fa-dolly ml-1"></i></a>
