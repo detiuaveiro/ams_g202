@@ -24,22 +24,6 @@
 
   	<link href="/ams_g202/css/ui.css" rel="stylesheet">
   	<script src="/ams_g202/js/script.js"></script>
-
-	<script>
-		$(document).ready(function(){
-			$("a.btn.btn-block").click(function(){
-				var items = $("span.notify").text()
-				if($(this).text() == "Adicionar ao carrinho"){
-					$(this).text("Remover do carrinho").toggleClass("btn-danger btn-primary");
-					items++;
-				}else{
-					$(this).text("Adicionar ao carrinho").toggleClass("btn-danger btn-primary");
-					items--;
-				}
-				$("span.notify").text(items);
-			});
-		});
-	</script>
 </head>
 <body>
 	<header class="section-header">
