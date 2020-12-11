@@ -22,7 +22,19 @@
   	<link href="/ams_g202/fonts/material-icons/css/materialdesignicons.css" rel="stylesheet">
 
   	<link href="/ams_g202/css/ui.css" rel="stylesheet">
-  	<script src="/ams_g202/js/script.js"></script>
+	<script src="/ams_g202/js/script.js"></script>
+	  
+	<script>
+		$(document).ready(function(){
+			$('#login').on('submit', function(e){
+				if ($("input[name=email]").val()=="produtor@ua.pt"){
+					$('#login').attr('action', 'sell');
+				} else{
+					$('#login').attr('action', 'buy');
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<header class="section-header">
@@ -60,7 +72,7 @@
 		<div class="card mx-auto" style="max-width: 380px; margin-top:30px;">
 			<div class="card-body">
 			<h4 class="card-title mb-4 pb-2">Iniciar sessão</h4>
-			<form action="buy">
+			<form id="login" action="">
 				<div class="form-group mt-4">
 					<div class="input-group">
 						<div class="input-group-prepend">
