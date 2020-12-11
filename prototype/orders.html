@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  	<title>Encomendas em progresso | EcoMarket</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/ams_g202/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/ams_g202/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/ams_g202/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="/ams_g202/favicon.ico">
+
+  	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+
+  	<script src="/ams_g202/js/bootstrap.bundle.min.js"></script>
+	<link href="/ams_g202/css/bootstrap.css" rel="stylesheet">
+	  
+	<script src="/ams_g202/js/universal-parallax.min.js"></script>
+
+  	<link href="/ams_g202/fonts/fontawesome/css/all.min.css" rel="stylesheet">
+  	<link href="/ams_g202/fonts/feathericons/css/iconfont.css" rel="stylesheet">
+  	<link href="/ams_g202/fonts/material-icons/css/materialdesignicons.css" rel="stylesheet">
+
+  	<link href="/ams_g202/css/ui.css" rel="stylesheet">
+  	<script src="/ams_g202/js/script.js"></script>
+</head>
+<body>
+	<header class="section-header">
+		<section class="header-main border-bottom">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-3 col-sm-4 col-md-4 col-5">
+						<a class="navbar-brand" href="/ams_g202/">
+							<img src="/ams_g202/images/logo.svg" class="logo" alt="">
+							<span class="font-weight-bolder text-success">Eco</span>Market
+						</a>
+					</div>
+					<div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+							<form action="#" class="search">
+								<div class="input-group w-100">
+									<input type="search" name="search" autocomplete="off" class="form-control" style="width:55%;" placeholder="Procurar produto..." required>
+									<div class="input-group-append">
+									<button class="btn btn-primary" type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+									</div>
+								</div>
+							</form> <!-- search-wrap .end// -->
+					</div> <!-- col.// -->
+					<div class="col-lg-3 col-sm-8 col-md-4 col-7">
+						<div class="d-flex justify-content-end">
+							<a href="checkout" class="widget-header mr-3">
+								<div class="icon">
+									<i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
+									<span class="notify">0</span>
+								</div>
+							</a>
+				
+							<div class="widget-header dropdown">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+									<div class="icon icon-sm rounded-circle border">
+										<i class="fa fa-user"></i>
+									</div>
+									<span class="sr-only">Ações</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Conta</a>
+									<a class="dropdown-item" href="orders">Encomendas</a>
+									<hr class="dropdown-divider">
+									<a class="dropdown-item" href="#">Definições</a>
+									<hr class="dropdown-divider">
+									<a class="dropdown-item" href="login">Terminar sessão</a>
+								</div> <!--  dropdown-menu .// -->
+							</div>  <!-- widget-header .// -->
+						</div> <!-- widgets-wrap.// -->
+					</div> <!-- col.// -->
+				</div> <!-- row.// -->
+			</div> <!-- container.// -->
+		</section> <!-- header-main .// -->
+		
+		<nav class="navbar navbar-expand-md navbar-main border-bottom d-md-none">
+		  <div class="container justify-content-center">
+				<form class="col-12 col-sm-8 my-2">
+					<div class="input-group">
+						<input type="search" name="search" autocomplete="off" class="form-control" placeholder="Procurar..." required>
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			   </div> <!-- collapse .// -->
+		  </div> <!-- container .// -->
+		</nav>
+		
+	</header> <!-- section-header.// -->
+
+
+	<!-- ========================= MODAL #LARANJA CONTENT ========================= -->
+	<div class="modal fade" id="laranja" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-xl">
+			<div class="modal-content shadow-lg">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Tracking | Encomenda #1234</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<article class="card">
+						<div class="card-body row no-gutters justify-content-between">
+							<div class="col">
+								<strong>Hora prevista:</strong> <br>12:10 (11/12/2020)
+							</div>
+							<div class="col">
+								<strong>Transportadora:</strong> <br> Nacex | <i class="fa fa-phone"></i> 238 238 238
+							</div>
+							<div class="col">
+								<strong>Estafeta:</strong> <br> Viriato Clemente
+							</div>
+							<div class="col-3">
+								<strong>Estado:</strong> <br> Recolhida pela transportadora
+							</div>
+							<div class="col">
+								<strong>Pacote #:</strong> <br> 987654
+							</div>
+						</div>
+					</article>
+					
+					<div class="tracking-wrap">
+						<div class="step active">
+							<span class="icon"> <i class="fa fa-check"></i> </span>
+							<span class="text">Encomenda finalizada</span>
+						</div> <!-- step.// -->
+						<div class="step active">
+							<span class="icon"> <i class="fa fa-user"></i> </span>
+							<span class="text">Recolhida pela transportadora</span>
+						</div> <!-- step.// -->
+						<div class="step">
+							<span class="icon"> <i class="fa fa-truck"></i> </span>
+							<span class="text">Em viagem</span>
+						</div> <!-- step.// -->
+						<div class="step">
+							<span class="icon"> <i class="fa fa-box"></i> </span>
+							<span class="text">Pronta para ser entregue</span>
+						</div> <!-- step.// -->
+					</div>
+					
+					<hr>
+					<div class="row align-items-center">
+						<div class="col-md-4">
+							<figure class="itemside mb-3">
+								<div class="aside"><img src="/ams_g202/images/products/laranja_algarve_1.jpg" class="img-sm border rounded"></div>
+								<figcaption class="info align-self-center">
+									<p class="font-weight-bolder">Item #1</p>
+									<p class="title mb-0">Laranja do Algarve</p>
+									<var class="price text-muted">2 kg * 1,49€</var>
+								</figcaption>
+							</figure> 
+						</div>
+						<div class="col">
+							<p class="mb-0">
+								<strong>Nota: </strong>
+								Visto que se trata de itens com produtores diferentes, cada produto tem um tracking individual associado a si.
+								Caso se tratasse de alimentos de um mesmo produtor, então aí existiria apenas um tracking para a encomenda, pois o produtor enviaria tudo no mesmo pacote.
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ========================= MODAL #LARANJA END// ========================= -->
+
+	<!-- ========================= MODAL #DIOSPIRO ========================= -->
+	<div class="modal fade" id="diospiro" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content shadow-lg">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel2">Tracking | Encomenda #1234</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+			
+				<article class="card">
+					<div class="card-body row no-gutters justify-content-between">
+						<div class="col">
+							<strong>Hora prevista:</strong> <br>12:04 (11/12/2020)
+						</div>
+						<div class="col">
+							<strong>Transportadora:</strong> <br> Nacex | <i class="fa fa-phone"></i> 238 238 238
+						</div>
+						<div class="col">
+							<strong>Estafeta:</strong> <br> João Tomás
+						</div>
+						<div class="col">
+							<strong>Estado:</strong> <br> Em viagem
+						</div>
+						<div class="col">
+							<strong>Pacote #:</strong> <br> 987655
+						</div>
+					</div>
+				</article>
+				
+				<div class="tracking-wrap">
+					<div class="step active">
+						<span class="icon"> <i class="fa fa-check"></i> </span>
+						<span class="text">Encomenda finalizada</span>
+					</div> <!-- step.// -->
+					<div class="step active">
+						<span class="icon"> <i class="fa fa-user"></i> </span>
+						<span class="text">Recolhida pela transportadora</span>
+					</div> <!-- step.// -->
+					<div class="step active">
+						<span class="icon"> <i class="fa fa-truck"></i> </span>
+						<span class="text">Em viagem</span>
+					</div> <!-- step.// -->
+					<div class="step">
+						<span class="icon"> <i class="fa fa-box"></i> </span>
+						<span class="text">Pronta para ser entregue</span>
+					</div> <!-- step.// -->
+				</div>
+				
+				<hr>
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<figure class="itemside mb-3">
+							<div class="aside"><img src="/ams_g202/images/products/laranja_algarve_1.jpg" class="img-sm border rounded"></div>
+							<figcaption class="info align-self-center">
+								<p class="font-weight-bolder">Item #2</p>
+								<p class="title mb-0">Dióspiro Persimmon</p>
+								<var class="price text-muted">1 kg * 1,55€</var>
+							</figcaption>
+						</figure> 
+					</div>
+					<div class="col">
+						<p class="mb-0">
+							<strong>Nota: </strong>
+							Visto que se trata de itens com produtores diferentes, cada produto tem um tracking individual associado a si.
+							Caso se tratasse de alimentos de um mesmo produtor, então aí existiria apenas um tracking para a encomenda, pois o produtor enviaria tudo no mesmo pacote.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- ========================= MODAL #DIOSPIRO END// ========================= -->
+
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y bg">
+<div class="container">
+
+<div class="row">
+	<aside class="col-md-3">
+		<div class="sticky-top pt-3">
+
+			<!-- Customer -->
+			<ul class="list-group">
+				<a class="list-group-item" href="#">Conta</a>
+				<a class="list-group-item active" href="#">Encomendas em progresso</a>
+				<a class="list-group-item" href="#">Histórico de compras</a>
+				<a class="list-group-item" href="#">Resolução de problemas</a>
+				<a class="list-group-item" href="#">Definições</a>
+			</ul>
+			<a class="btn btn-light btn-block mt-4" href="login"><i class="fa fa-power-off"></i><span class="text">Terminar sessão</span></a>
+
+			<!-- Producer
+			<br>
+			<br>
+			<ul class="list-group">
+				<a class="list-group-item active" href="#">Conta</a>
+				<a class="list-group-item" href="#">Encomendas pendentes</a>
+				<a class="list-group-item" href="#">Produtos à venda</a>
+				<a class="list-group-item" href="#">Histórico de vendas</a>
+				<a class="list-group-item" href="#">Resolução de problemas</a>
+				<a class="list-group-item" href="#">Definições</a>
+			</ul>
+			<a class="btn btn-light btn-block mt-4" href="login"><i class="fa fa-power-off"></i><span class="text">Terminar sessão</span></a> -->
+
+		</div>
+	</aside> <!-- col.// -->
+	<main class="col-md-9">
+
+		<article class="card mt-3">
+			<div class="card-body">
+				
+				<figure class="icontext">
+						<div class="icon">
+							<img class="rounded-circle img-sm border" src="/ams_g202/images/avatars/avatar.jpg">
+						</div>
+						<div class="text">
+							<p class="font-weight-bolder">Calisto Comum</p>
+							<p class="my-2">calisto.comum@ua.pt</p>
+							<a href="#" class="btn-link">Alterar</a>
+						</div>
+				</figure>
+				<hr>
+
+				<article class="card-group">
+					<figure class="card bg">
+						<div class="p-3">
+							 <h5 class="card-title">4</h5>
+							<span>encomendas ao todo</span>
+						</div>
+					</figure>
+					<figure class="card bg">
+						<div class="p-3">
+							 <h5 class="card-title">1</h5>
+							<span>encomenda em progresso</span>
+						</div>
+					</figure>
+					<figure class="card bg">
+						<div class="p-3">
+							 <h5 class="card-title">3</h5>
+							<span>encomendas finalizados</span>
+						</div>
+					</figure>
+					<figure class="card bg">
+						<div class="p-3">
+							 <h5 class="card-title">0</h5>
+							<span>encomendas reembolsados</span>
+						</div>
+					</figure>
+				</article>
+				
+
+			</div> <!-- card-body .// -->
+		</article> <!-- card.// -->
+
+		<!-- =========================  ORDERS ========================= --> 
+		<article class="card order-group mt-4">
+			<header class="card-header">
+				<b class="d-inline-block mr-4">Encomenda #1234</b>
+				<time class="text-muted float-right"><i class="fa fa-calendar-alt"></i> 11/12/2020</time>
+			</header>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4">
+						<h6 class="text-muted">Pagamento</h6>
+						<span><i class="fab fa-lg fa-paypal"></i> PayPal</span>
+						<p class="mt-1">Total:<span class="b"> 7,53€</span></p>
+					</div>
+					<div class="col-md-4">
+						<h6 class="text-muted">Contacto</h6>
+						<p>Calisto Comum <br> 969 969 969</p>
+					</div>
+					<div class="col-md-4">
+						<h6 class="text-muted">Morada</h6>
+						<p>Rua Dr. Calisto Raro, Nº 20, 3º direito <br> 3810-104 | Glória, Aveiro, Portugal</p>
+					</div>
+				</div> <!-- row.// -->
+				<div class="table-responsive mt-4">
+					<table class="table table-hover">
+						<tr>
+							<td width="65" class="align-middle">
+								<img src="/ams_g202/images/products/laranja_algarve_1.jpg" class="img-sm border rounded">
+							</td>
+							<td class="align-middle">
+								<p class="font-weight-bolder mb-1">Item #1</p>
+								<p class="title mb-0">Laranja do Algarve</p>
+								<var class="price text-muted">2 kg * 1,49€</var>
+							</td>
+							<td class="align-middle"><span class="text-muted">Produtor</span> <br> Frutas Martinho</td>
+							<td width="250" class="align-middle">
+								<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#laranja">Tracking</a> <a href="#" class="btn btn-light">Detalhes</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="align-middle">
+								<img src="/ams_g202/images/products/diospiro_persimmon.jpg" class="img-sm border rounded">
+							</td>
+							<td class="align-middle">
+								<p class="font-weight-bolder mb-1">Item #2</p>
+								<p class="title mb-0">Dióspiro Persimmon</p>
+								<var class="price text-muted">1 kg * 1,55€</var>
+							</td>
+							<td class="align-middle"><span class="text-muted">Produtor</span> <br> Cacial</td>
+							<td class="align-middle">
+								<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#diospiro">Tracking</a> <a href="#" class="btn btn-light">Detalhes</a>
+							</td>
+						</tr>
+					</table>
+				</div> <!-- table-responsive .end// -->
+			</div> <!-- card-body .// -->
+		</article> <!-- card.// -->
+		<!-- =========================  ORDERS END.// ========================= -->
+
+	</main> <!-- col.// -->
+</div>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+
+	<footer class="section-footer border-top shadow pt-2 pb-2">
+		<div class="container">
+			<section class="footer-copyright d-flex align-items-center justify-content-between">
+				<p class="mt-0 pt-3 text-muted">© 2020 EcoMarket</p>
+				<div class="mt-0">
+					<a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					<a class="btn btn-icon btn-light" title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+					<a class="btn btn-icon btn-light" title="Twitter" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+				</div>
+			</section>
+		</div>
+	</footer>
+
+
+
+</body>
+</html>
