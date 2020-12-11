@@ -95,6 +95,30 @@
 	</header> <!-- section-header.// -->
 
 
+
+	<!-- ============================ MODAL #SUCCESS ================================= -->
+	<div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel4">Encomenda finalizada com sucesso</h5>
+			  	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+			  	</button>
+			</div>
+			<div class="modal-body text-center">
+				<i class="fas fa-check-circle fa-7x text-success my-3"></i>
+				<h4 class="title mt-4">Obrigado por escolher o EcoMarket <br>para as suas compras!</h4>
+				<h5 class="my-4 font-weight-normal">Receberá o seu pedido em breve!</h5>
+				<p class="text-muted my-3">Para acompanhar a sua encomenda, <br>pode ir a "Encomendas" no menu de utilizador.</p>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<!-- ============================ MODAL #SUCCESS END// ================================= -->
+
+
+
 <section class="section-content padding-y bg">
 <div class="container">
 
@@ -163,7 +187,7 @@
 <article class="card mb-4">
 <div class="card-body">
 	<h4 class="card-title mb-4">Detalhes da entrega</h4>
-	<form action="">
+	<form>
 		<div class="row">
 			<div class="form-group col-sm-6">
 				<label class="js-check box active">
@@ -373,7 +397,7 @@
 				</dl>
 				<hr>
 				<p class="small mb-3 text-muted">Por favor confirme todos os dados introduzidos antes de finalizar a sua encomenda.</p>
-				<a href="#" class="btn btn-primary btn-block">Finalizar encomenda <i class="fas fa-dolly ml-1"></i></a>
+				<a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#success">Finalizar encomenda <i class="fas fa-dolly ml-1"></i></a>
 				<a href="buy" class="btn btn-light btn-block">Continuar a comprar</a>
 				
 			</div> <!-- card-body.// -->
