@@ -60,77 +60,112 @@
 
 			<!-- 0 -->
 			<header class="section-heading">
-				<h2 class="section-title text-success">0.&nbsp; Protótipo</h2>
+				<h1 class="section-title text-success">Protótipo</h1>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
+			<article class="pt-2 mb-5 text-justify">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				feito à mão
+				usando a frame work BOOTSTRAP
 			</article>
 
-
-
+			<hr class="mb-5">
 
 			<!-- 1 -->
 			<header class="section-heading">
-				<h2 class="section-title">1.&nbsp; Página de criação de conta <small><small class="ml-1">(para ambos)</small></small></h2>
+				<h3 class="section-title">1.&nbsp; Página de criação de conta <small><small class="ml-1">(para ambos)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/registration" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/registration</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+			<article class="pt-2 mb-5 text-justify">
+				<p>
+					Nesta página, o utilizador cria a sua conta, a sua identidade no EcoMarket. Para começar, precisa decidir que tipo de conta vai criar: uma conta de cliente (acesso à compra de produtos) ou uma conta de produtor (acesso à venda de produtos).
+				</p>
+				<p>
+					Caso opte por uma conta do tipo cliente, necessita de inserir um conjunto de dados obrigatórios. São eles nome (primeiro e último), email, telefone e localidade (concelho e distrito). Por último, só precisa de escolher uma palavra-passe, digitar o CAPTCHA correto (para evitar criação de contas robôs de spam) e concordar com os termos e condições do EcoMarket.
+				</p>
+				<p>
+					Pelo contrário, caso opte por uma conta do tipo produtor, terá de possuir o selo "Portugal Sou Eu" (antigo "Compro o que é nosso") para que consiga provar que se trata verdadeiramente de um produtor nacional. Após confirmar que possui o selo, aparecerão campos onde é necessário que digite dados essenciais para que conclua o seu registo como produtor, semelhante aos campos da conta cliente mas com alguns ajustes.
+				</p>
+				<p>
+					Clicar no botão de criar conta levará o utilizador para a página de início de sessão (detalhada em baixo), onde necessitará de introduzir as credenciais que definiu nesta página.
+				</p>
 			</article>
 
-
-
-
+			<hr class="mb-5">
 
 			<!-- 2 -->
 			<header class="section-heading">
-				<h2 class="section-title">2.&nbsp; Página de início de sessão <small><small class="ml-1">(para ambos)</small></small></h2>
+				<h3 class="section-title">2.&nbsp; Página de início de sessão <small><small class="ml-1">(para ambos)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/login" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/login</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+			<article class="pt-2 mb-5 text-justify">
+				<p>
+					Aqui, o utilizador terá de iniciar sessão através da indicação do email e respetiva palavra-passe associada à sua conta EcoMarket, previamente criada. O utilizador poderá ainda manter a sessão iniciada no dispositivo atual, através da caixa de verificação "lembrar-me". Caso o utilizador inicie sessão com sucesso noutro dispositivo/browser ou limpe as cookies do browser atual, a sessão iniciada no dispositivo atual perde-se.
+				</p>
+				<p>
+					Caso o utilizador não se recorde da palavra-passe que definiu, poderá recuperá-la através de um formulário (ainda por implementar) que irá enviar um email para o utilizador definir uma nova palavra-passe. Como a base de dados é altamente e cuidadosamente cifriada, até para os desenvolvedores do EcoMarket, é completamente impossível conseguimos indicar ao utilizador qual é a sua palavra-passe, daí ser necessário ele definir uma nova.
+				</p>
+				<p>
+					Clicar no botão de iniciar sessão levará o utilizador para a página de compra de produtos, caso seja uma conta do tipo cliente, ou para a página de venda de produtos, caso seja uma conta do tipo produtor. Para propósitos de teste, o tipo predefinido de qualquer conta é conta de cliente. Para simular uma conta de produtor, deverá utilizar o email "joaquim.raro@ua.pt" (com uma palavra-passe qualquer).
+				</p>
 			</article>
 
-
-
+			<hr class="mb-5">
 
 			<!-- 3 -->
 			<header class="section-heading">
-				<h2 class="section-title">3.&nbsp; Página de compra de produtos <small><small class="ml-1">(para o cliente)</small></small></h2>
+				<h3 class="section-title">3.&nbsp; Página de compra de produtos <small><small class="ml-1">(para o cliente)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/buy" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/buy</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+			<article class="pt-2 mb-5 text-justify">
+				<p>
+					Estamos perante a lista de todos os produtos que o cliente pode comprar. Esta lista mostra aspetos fundamentais sobre cada produto, como o nome, a imagem ilustrativa e o preço, mas sem entrar em grandes detalhes. A vista predefinida é a vista de grelha mas, no futuro, será implementada também uma vista de lista, com mais detalhes sobre cada produto. É possível filtrar produtos segundo os vários critérios apresentados na lateral esquerda da página. É possível ainda ordenar os diferentes produtos por relevância, tempo, saída, preço e classificação. 
+				</p>
+				<p>
+					O utilizador pode adicionar (e remover) diretamente os produtos que desejar comprar ao carrinho ou então abrir a página individual do produto, clicando no nome ou na imagem do respetivo produto, e adicioná-lo ao carrinho depois. Para efeitos de uma mais rápida prototipagem, todos os produtos levam para a mesma página individual (laranja do Algarve).
+				</p>
+				<p>
+					A barra de navegação no topo também sofreu alterações apresentando agora uma barra para pesquisa de produtos. Apresenta ainda, no canto superior direito, o número de itens adicionados ao carrinho (que neste momento redireciona o utilizador para a página de pagamento/checkout) e o menu do utilizador (que redireciona o utilizador para a página da gestão de conta ao clicar em "Conta", para a página das encomendas em progresso ao clicar em "Encomendas" e para a página de iniciar sessão ao clicar em "Terminar sessão").
+				</p>
 			</article>
 
-
-
+			<hr class="mb-5">
 
 			<!-- 4 -->
 			<header class="section-heading">
-				<h2 class="section-title">4.&nbsp; Página de venda de produtos <small><small class="ml-1">(para o produtor)</small></small></h2>
+				<h3 class="section-title">4.&nbsp; Página de venda de produtos <small><small class="ml-1">(para o produtor)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/sell" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/sell</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+			<article class="pt-2 mb-5 text-justify">
+				<p>
+					O produtor tem nesta página a lista de todos os produtos que está a vender de momento. Tem uma vista geral e rápida sobre a quantidade restante de cada produto que anunciou, de modo a ajustar a sua produção para as necessidades dos clientes. Pode ainda editar e remover definitivamente qualquer produto que esteja a vender e ainda adicionar novos, através do botão "Vender novo produto".
+				</p>
+				<p>
+					Aqui a barra de navegação no topo tem variações, apresentando agora uma checklist com o número de pedidos pendentes que o produtor tem para preparar para aos clientes. O menu do utilizador redireciona o utilizador para a página da gestão de conta, ao clicar em "Conta", e para a página de iniciar sessão, ao clicar em "Terminar sessão").
+				</p>
 			</article>
-
-
-
 
 			<!-- 5 -->
 			<header class="section-heading">
-				<h2 class="section-title">5.&nbsp; Página individual do produto <small><small class="ml-1">(para o cliente)</small></small></h2>
+				<h3 class="section-title">5.&nbsp; Página individual do produto <small><small class="ml-1">(para o cliente)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/product" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/product</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+			<article class="pt-2 mb-5 text-justify">
+				<p>
+					Aqui o cliente tem uma vista detalhada sobre todas as características do produto. São algumas delas: estado do produto, número de encomendas, média e o número de avaliações, preço, descrição, variedade, origem, etc.
+				</p>
+				<p>
+					Tem ainda, no final da página, uma área dedicada a feedback, onde os utilizadores que compraram o produto podem deixar avaliações/reviews, classificando o produto de 1 a 5 e/ou adicionado um comentário. Todas as avaliações são públicas, apresentando o nome a foto de perfil de cada utilizador, para comprovar a veracidade da avaliação.
+				</p>
+				<p>
+					Caso o utilizador queira comprar o produto, é necessário que introduza a quantidade do produto que pretende comprar (em quilogramas) e que escolha o produtor de onde deseja encomendar o produto em questão. Depois disso, basta clicar no botão "Comprar agora" (redirecionando o utilizador para a página de pagamento/checkout) ou no botão "Adicionar ao carrinho", caso ainda queira encomendar outro produto antes de finalizar a encomenda.
+				</p>
 			</article>
 
 
@@ -138,11 +173,11 @@
 
 			<!-- 6 -->
 			<header class="section-heading">
-				<h2 class="section-title">6.&nbsp; Página de checkout <small><small class="ml-1">(para o cliente)</small></small></h2>
+				<h3 class="section-title">6.&nbsp; Página de pagamento da encomenda <small><small class="ml-1">(para o cliente)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/checkout" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/checkout</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
+			<article class="pt-2 mb-5 text-justify">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
 			</article>
 
@@ -152,11 +187,11 @@
 
 			<!-- 7 -->
 			<header class="section-heading">
-				<h2 class="section-title">7.&nbsp; Página das encomendas pendentes <small><small class="ml-1">(para o cliente)</small></small></h2>
+				<h3 class="section-title">7.&nbsp; Página das encomendas em progresso <small><small class="ml-1">(para o cliente)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/orders" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/orders</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
+			<article class="pt-2 mb-5 text-justify">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
 			</article>
 
@@ -167,11 +202,11 @@
 
 			<!-- 8 -->
 			<header class="section-heading">
-				<h2 class="section-title">8.&nbsp; Página da gestão da conta <small><small class="ml-1">(para o cliente)</small></small></h2>
+				<h3 class="section-title">8.&nbsp; Página da gestão da conta <small><small class="ml-1">(para o cliente)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/account_customer" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/account_customer</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
+			<article class="pt-2 mb-5 text-justify">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
 			</article>
 
@@ -180,11 +215,11 @@
 
 			<!-- 9 -->
 			<header class="section-heading">
-				<h2 class="section-title">9.&nbsp; Página da gestão da conta <small><small class="ml-1">(para o produtor)</small></small></h2>
+				<h3 class="section-title">9.&nbsp; Página da gestão da conta <small><small class="ml-1">(para o produtor)</small></small></h3>
 				<a class="btn-link text-muted text-break" href="/ams_g202/prototype/account_producer" target="_blank">https://detiuaveiro.github.io/ams_g202/prototype/account_producer</a>
 			</header>
 			
-			<article class="pt-2 mb-5 pb-2">
+			<article class="pt-2 mb-5 text-justify">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
 			</article>
 			
