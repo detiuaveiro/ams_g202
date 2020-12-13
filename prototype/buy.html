@@ -123,12 +123,12 @@
 <div class="card">
 	<article class="filter-group">
 		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
+			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
 				<i class="icon-control fa fa-chevron-down"></i>
 				<h6 class="title">Produtos</h6>
 			</a>
 		</header>
-		<div class="filter-content collapse show" id="collapse_4">
+		<div class="filter-content collapse show" id="collapse_1">
 			<div class="card-body">
 			  <label class="checkbox-btn">
 			    <input type="checkbox" checked>
@@ -209,6 +209,52 @@
 	</article> <!-- filter-group .// -->
 	<article class="filter-group">
 		<header class="card-header">
+			<a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Avaliações</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse in" id="collapse_4">
+			<div class="card-body">
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+					</div>
+				</label>
+		  
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+					</div>
+				</label>
+		  
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+					</div>
+				</label>
+		  
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i>
+					</div>
+				</label>
+
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i>
+					</div>
+				</label>
+			</div><!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group .// -->
+	<article class="filter-group">
+		<header class="card-header">
 			<a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
 				<i class="icon-control fa fa-chevron-down"></i>
 				<h6 class="title">Disponibilidade</h6>
@@ -217,23 +263,23 @@
 		<div class="filter-content collapse in" id="collapse_5">
 			<div class="card-body">
 				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input" checked>
-				  <div class="custom-control-label">Disponível</div>
+				  	<input type="radio" name="myfilter_radio" class="custom-control-input" checked>
+				  	<div class="custom-control-label">Disponível</div>
 				</label>
 
 				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input">
-				  <div class="custom-control-label">Indisponível</div>
+				  	<input type="radio" name="myfilter_radio" class="custom-control-input">
+				  	<div class="custom-control-label">Indisponível</div>
 				</label>
 
 				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input">
-				  <div class="custom-control-label">Fora de época</div>
+				 	<input type="radio" name="myfilter_radio" class="custom-control-input">
+				  	<div class="custom-control-label">Em promoção</div>
 				</label>
 
 				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input">
-				  <div class="custom-control-label">Promoção</div>
+					<input type="radio" name="myfilter_radio" class="custom-control-input">
+					<div class="custom-control-label">Fora de época</div>
 				</label>
 			</div><!-- card-body.// -->
 		</div>
@@ -250,11 +296,11 @@
 				<optgroup label="Relevância">
 					<option>Mais relevante</option>
 				</optgroup>
-				<optgroup label="Tempo">
+				<optgroup label="Data">
 					<option>Mais recente</option>
 					<option>Mais antigo</option>
 				</optgroup>
-				<optgroup label="Saída">
+				<optgroup label="Popularidade">
 					<option>Mais vendido</option>
 					<option>Menos vendido</option>
 				</optgroup>
@@ -262,9 +308,9 @@
 					<option>Mais barato</option>
 					<option>Mais caro</option>
 				</optgroup>
-				<optgroup label="Classificação">
-					<option>Melhor avaliação</option>
-					<option>Pior avaliação</option>
+				<optgroup label="Avaliação">
+					<option>Melhor classificação</option>
+					<option>Pior classificação</option>
 				</optgroup>
 			</select>
 			<div class="btn-group">
@@ -415,17 +461,12 @@
 </div> <!-- row end.// -->
 
 
-<nav class="mt-4 d-flex justify-content-center" aria-label="Page navigation sample">
+<nav class="mt-4 d-flex justify-content-center" aria-label="Page navigation">
   <ul class="pagination">
     <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
     <li class="page-item active"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
-	<li class="page-item"><a class="page-link" href="#">3</a></li>
-	<li class="page-item"><a class="page-link" href="#">4</a></li>
-	<li class="page-item"><a class="page-link" href="#">5</a></li>
-	<li class="page-item"><a class="page-link" href="#">6</a></li>
-	<li class="page-item"><a class="page-link" href="#">7</a></li>
-	<li class="page-item"><a class="page-link" href="#">8</a></li>
+	<li class="page-item disabled"><a class="page-link" href="#">...</a></li>
 	<li class="page-item"><a class="page-link" href="#">9</a></li>
     <li class="page-item"><a class="page-link" href="#">Seguinte</a></li>
   </ul>
