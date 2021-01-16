@@ -853,6 +853,7 @@ a[class*=card]:hover .title {
 /* GRID STYLE PRODUCT ITEM */
 .card-product-grid {
   margin-bottom: 20px;
+  overflow-x: hidden;
 }
 .card-product-grid .img-wrap {
   border-radius: 0.2rem 0.2rem 0 0;
@@ -882,8 +883,7 @@ a[class*=card]:hover .title {
   color: #3167eb;
 }
 .card-product-grid .fix-height {
-  height: 80px;
-  overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 .card-product-grid .btn-overlay {
   transition: 0.5s;
@@ -1589,4 +1589,76 @@ a:hover{
 
 .dropdown-menu {
   z-index: 1100;
+}
+
+/*!
+ * jQuery Smart Cart v3.0.6
+ * The smart interactive jQuery Shopping Cart plugin with PayPal payment support
+ * 
+ * Licensed under the terms of the MIT License
+ * https://github.com/tete-chercheuse/smart-cart/blob/master/LICENSE
+ */
+
+ .sc-highlight {
+  animation: highlight 1s;
+}
+
+@keyframes highlight {
+  from {
+    background: #faebcc;
+  }
+
+  to {
+    background: none;
+  }
+}
+@-webkit-keyframes highlight {
+  from {
+    background: #faebcc;
+  }
+
+  to {
+    background: none;
+  }
+}
+
+.sc-product-item {
+  position: relative;
+}
+
+.sc-product-item:after, .sc-product-item:before {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.sc-added-item {
+  border-color: #5cb85c;
+}
+
+.sc-added-item:after {
+  content: "\2713";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 4px;
+  z-index: 99;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.sc-added-item:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: 98;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 40px 40px 0;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  border-color: rgba(255, 255, 255, 0) #5cb85c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
 }
