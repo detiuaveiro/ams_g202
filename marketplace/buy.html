@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  	<title>Comprar | EcoMarket</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/ams_g202/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/ams_g202/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/ams_g202/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="/ams_g202/favicon.ico">
+
+  	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+
+  	<script src="/ams_g202/js/bootstrap.bundle.min.js"></script>
+	<link href="/ams_g202/css/bootstrap.css" rel="stylesheet">
+	  
+	<script src="/ams_g202/js/universal-parallax.min.js"></script>
+	<script src="/ams_g202/js/smart-cart.js"></script>
+
+  	<link href="/ams_g202/fonts/fontawesome/css/all.min.css" rel="stylesheet">
+  	<link href="/ams_g202/fonts/feathericons/css/iconfont.css" rel="stylesheet">
+  	<link href="/ams_g202/fonts/material-icons/css/materialdesignicons.css" rel="stylesheet">
+
+  	<link href="/ams_g202/css/ui.css" rel="stylesheet">
+  	<script src="/ams_g202/js/script.js"></script>
+</head>
+<body>
+	<header class="section-header">
+		<section class="header-main border-bottom">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-3 col-sm-4 col-md-4 col-5">
+						<a class="navbar-brand" href="/ams_g202/marketplace/">
+							<img src="/ams_g202/images/logo.svg" class="logo" alt="">
+							<span class="font-weight-bolder text-success">Eco</span>Market
+						</a>
+					</div>
+					<div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+							<form action="#" class="search">
+								<div class="input-group w-100">
+									<input type="search" name="search" autocomplete="off" class="form-control" style="width:55%;" placeholder="Procurar produto..." required>
+									<div class="input-group-append">
+									<button class="btn btn-primary" type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+									</div>
+								</div>
+							</form> <!-- search-wrap .end// -->
+					</div> <!-- col.// -->
+					<div class="col-lg-3 col-sm-8 col-md-4 col-7">
+						<div class="d-flex justify-content-end">
+							<a href="checkout" class="widget-header mr-3"  data-toggle="tooltip" data-placement="bottom" title="Carrinho">
+								<div class="icon">
+									<i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
+									<span class="notify">0</span>
+								</div>
+							</a>
+				
+							<div class="widget-header dropdown">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+									<div class="icon icon-sm rounded-circle border" data-toggle="tooltip" data-placement="bottom" title="Menu">
+										<i class="fa fa-user"></i>
+									</div>
+									<span class="sr-only">Ações</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="account_customer">Conta</a>
+									<a class="dropdown-item" href="orders">Encomendas</a>
+									<hr class="dropdown-divider">
+									<a class="dropdown-item" href="#">Definições</a>
+									<hr class="dropdown-divider">
+									<a class="dropdown-item" href="login">Terminar sessão</a>
+								</div> <!--  dropdown-menu .// -->
+							</div>  <!-- widget-header .// -->
+						</div> <!-- widgets-wrap.// -->
+					</div> <!-- col.// -->
+				</div> <!-- row.// -->
+			</div> <!-- container.// -->
+		</section> <!-- header-main .// -->
+		
+		<nav class="navbar navbar-expand-md navbar-main border-bottom d-md-none">
+		  <div class="container justify-content-center">
+				<form class="col-12 col-sm-8 my-2">
+					<div class="input-group">
+						<input type="search" name="search" autocomplete="off" class="form-control" placeholder="Procurar..." required>
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			   </div> <!-- collapse .// -->
+		  </div> <!-- container .// -->
+		</nav>
+		
+	</header> <!-- section-header.// -->
+
+
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y bg">
+<div class="container">
+	
+	<!-- SMARTCART PLUGIN -->
+	<div id="smartcart" class="d-none"></div>
+
+<div class="row">
+	<aside class="col-md-3">
+		
+<div class="card">
+	<article class="filter-group">
+		<header class="card-header">
+			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Produtos</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_1">
+			<div class="card-body">
+			  <label class="checkbox-btn">
+			    <input type="checkbox" checked>
+			    <span class="btn btn-light">Frutas</span>
+			  </label>
+
+			  <label class="checkbox-btn">
+			    <input type="checkbox" checked>
+			    <span class="btn btn-light">Legumes</span>
+			  </label>
+		</div><!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group .// -->
+	<article class="filter-group">
+		<header class="card-header">
+			<a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Produtores</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_2">
+			<div class="card-body">
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" checked>
+				  <div class="custom-control-label">Cacial
+				  	<b class="badge badge-pill badge-light float-right">21</b>  </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" checked>
+				  <div class="custom-control-label">Frusoal
+				  	<b class="badge badge-pill badge-light float-right">15</b>  </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" checked>
+				  <div class="custom-control-label">Parafrutas
+				  	<b class="badge badge-pill badge-light float-right">5</b> </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" checked>
+				  <div class="custom-control-label">Frutas Martinho
+				  	<b class="badge badge-pill badge-light float-right">8</b> </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" checked>
+				  <div class="custom-control-label">Frutas Tereso
+				  	<b class="badge badge-pill badge-light float-right">10</b>  </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" checked>
+					<div class="custom-control-label">MR Frutas
+					<b class="badge badge-pill badge-light float-right">11</b>  </div>
+				</label>
+	</div> <!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group .// -->
+	<article class="filter-group">
+		<header class="card-header">
+			<a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Preço</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_3">
+			<div class="card-body">
+				<div class="form-row justify-content-between">
+				<div class="form-group col-md-6">
+				  <label>Mínimo</label>
+				  <input class="form-control" placeholder="0€" type="number" min="0" max="100" step="5">
+				</div>
+				<div class="form-group text-right col-md-6">
+				  <label>Máximo</label>
+				  <input class="form-control" placeholder="100€" type="number" min="0" max="100" step="5">
+				</div>
+				</div> <!-- form-row.// -->
+				<button class="btn btn-block btn-primary">Filtrar</button>
+			</div><!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group .// -->
+	<article class="filter-group">
+		<header class="card-header">
+			<a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Avaliações</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse in" id="collapse_4">
+			<div class="card-body">
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+					</div>
+				</label>
+		  
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+					</div>
+				</label>
+		  
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+					</div>
+				</label>
+		  
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i> <i class="fa fa-star"></i>
+					</div>
+				</label>
+
+				<label class="custom-control custom-checkbox">
+					<input type="checkbox" checked class="custom-control-input">
+					<div class="custom-control-label text-warning">
+						<i class="fa fa-star"></i>
+					</div>
+				</label>
+			</div><!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group .// -->
+	<article class="filter-group">
+		<header class="card-header">
+			<a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Disponibilidade</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse in" id="collapse_5">
+			<div class="card-body">
+				<label class="custom-control custom-radio">
+				  	<input type="radio" name="myfilter_radio" class="custom-control-input" checked>
+				  	<div class="custom-control-label">Disponível</div>
+				</label>
+
+				<label class="custom-control custom-radio">
+				  	<input type="radio" name="myfilter_radio" class="custom-control-input">
+				  	<div class="custom-control-label">Indisponível</div>
+				</label>
+
+				<label class="custom-control custom-radio">
+				 	<input type="radio" name="myfilter_radio" class="custom-control-input">
+				  	<div class="custom-control-label">Em promoção</div>
+				</label>
+
+				<label class="custom-control custom-radio">
+					<input type="radio" name="myfilter_radio" class="custom-control-input">
+					<div class="custom-control-label">Fora de época</div>
+				</label>
+			</div><!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group .// -->
+</div> <!-- card.// -->
+
+	</aside> <!-- col.// -->
+	<main class="col-md-9">
+
+<header class="border-bottom mb-4 pb-3">
+		<div class="form-inline">
+			<span class="mr-md-auto">52 produtos encontrados</span>
+			<select class="mr-2 form-control">
+				<optgroup label="Relevância">
+					<option>Mais relevante</option>
+				</optgroup>
+				<optgroup label="Data">
+					<option>Mais recente</option>
+					<option>Mais antigo</option>
+				</optgroup>
+				<optgroup label="Popularidade">
+					<option>Mais vendido</option>
+					<option>Menos vendido</option>
+				</optgroup>
+				<optgroup label="Preço">
+					<option>Mais barato</option>
+					<option>Mais caro</option>
+				</optgroup>
+				<optgroup label="Avaliação">
+					<option>Melhor classificação</option>
+					<option>Pior classificação</option>
+				</optgroup>
+			</select>
+			<div class="btn-group">
+				<a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="Vista de lista"> 
+					<i class="fa fa-bars"></i></a>
+				<a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="Vista de grelha"> 
+					<i class="fa fa-th"></i></a>
+			</div>
+		</div>
+</header><!-- sect-heading -->
+
+<div class="row">
+	<div class="col-md-4">
+		<figure class="card card-product-grid sc-product-item">
+			<div class="img-wrap">
+				<a href="product">
+					<span class="badge badge-success">NOVO</span>
+					<img src="/ams_g202/images/products/laranja_algarve_1.jpg" alt="" data-name="product_image">
+					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+				</a>
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<a href="product">
+					<div class="fix-height">
+						<p class="title" data-name="product_name">Laranja do Algarve</p>
+						<div class="price-wrap mt-2">
+							<span class="price">1,49€</span><small class="text-muted"> /kg</small>
+						</div> <!-- price-wrap.// -->
+					</div>
+				</a>
+				<div class="form-group">
+					<label class="small">Produtor:</label>
+					<select class="custom-select custom-select-sm" name="product_desc">
+						<option value="Cacial">Cacial</option>
+						<option value="Frusoal">Frusoal</option>
+						<option value="Parafrutas">Parafrutas</option>
+						<option value="Frutas Martinho">Frutas Martinho</option>
+						<option value="Frutas Tereso">Frutas Tereso</option>
+						<option value="MR Frutas">MR Frutas</option>
+					</select>
+				</div>
+				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+			</figcaption>
+			<input name="product_price" value="1.49" type="hidden">
+            <input name="product_id" value="6" type="hidden">
+		</figure>
+	</div> <!-- col.// -->
+
+	<div class="col-md-4">
+		<figure class="card card-product-grid sc-product-item">
+			<div class="img-wrap">
+				<a href="product">
+					<span class="badge badge-danger">PROMOÇÃO</span><br>
+					<img src="/ams_g202/images/products/diospiro_persimmon.jpg" alt="" data-name="product_image">
+					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+				</a>
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<a href="product">
+					<div class="fix-height">
+						<p class="title" data-name="product_name">Dióspiro Persimmon</p>
+						<div class="price-wrap mt-2">
+							<span class="price">1,55€</span>
+							<del class="price-old">2,49€</del>
+							<small class="text-muted"> /kg</small>
+						</div> <!-- price-wrap.// -->
+					</div>
+				</a>
+				<div class="form-group">
+					<label class="small">Produtor:</label>
+					<select class="custom-select custom-select-sm" name="product_desc">
+						<option value="Cacial">Cacial</option>
+						<option value="Frusoal">Frusoal</option>
+						<option value="Parafrutas">Parafrutas</option>
+						<option value="Frutas Martinho">Frutas Martinho</option>
+						<option value="Frutas Tereso">Frutas Tereso</option>
+						<option value="MR Frutas">MR Frutas</option>
+					</select>
+				</div>
+				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+			</figcaption>
+			<input name="product_price" value="1.55" type="hidden">
+            <input name="product_id" value="5" type="hidden">
+		</figure>
+	</div> <!-- col.// -->
+
+	<div class="col-md-4">
+		<figure class="card card-product-grid sc-product-item">
+			<div class="img-wrap">
+				<a href="product">
+					<img src="/ams_g202/images/products/nabica.jpg" alt="" data-name="product_image">
+					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+				</a>
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<a href="product">
+					<div class="fix-height">
+						<p class="title" data-name="product_name">Nabiças</p>
+						<div class="price-wrap mt-2">
+							<span class="price">1,99€</span><small class="text-muted"> /kg</small>
+						</div> <!-- price-wrap.// -->
+					</div>
+				</a>
+				<div class="form-group">
+					<label class="small">Produtor:</label>
+					<select class="custom-select custom-select-sm" name="product_desc">
+						<option value="Cacial">Cacial</option>
+						<option value="Frusoal">Frusoal</option>
+						<option value="Parafrutas">Parafrutas</option>
+						<option value="Frutas Martinho">Frutas Martinho</option>
+						<option value="Frutas Tereso">Frutas Tereso</option>
+						<option value="MR Frutas">MR Frutas</option>
+					</select>
+				</div>
+				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+			</figcaption>
+			<input name="product_price" value="1.99" type="hidden">
+            <input name="product_id" value="4" type="hidden">
+		</figure>
+	</div> <!-- col.// -->
+
+	<div class="col-md-4">
+		<figure class="card card-product-grid sc-product-item">
+			<div class="img-wrap">
+				<a href="product">
+					<img src="/ams_g202/images/products/roma.jpg" alt="" data-name="product_image">
+					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+				</a>
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<a href="product">
+					<div class="fix-height">
+						<p class="title" data-name="product_name">Romã</p>
+						<div class="price-wrap mt-2">
+							<span class="price">1,59€</span><small class="text-muted"> /kg</small>
+						</div> <!-- price-wrap.// -->
+					</div>
+				</a>
+				<div class="form-group">
+					<label class="small">Produtor:</label>
+					<select class="custom-select custom-select-sm" name="product_desc">
+						<option value="Cacial">Cacial</option>
+						<option value="Frusoal">Frusoal</option>
+						<option value="Parafrutas">Parafrutas</option>
+						<option value="Frutas Martinho">Frutas Martinho</option>
+						<option value="Frutas Tereso">Frutas Tereso</option>
+						<option value="MR Frutas">MR Frutas</option>
+					</select>
+				</div>
+				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+			</figcaption>
+			<input name="product_price" value="1.59" type="hidden">
+            <input name="product_id" value="3" type="hidden">
+		</figure>
+	</div> <!-- col.// -->
+
+	<div class="col-md-4">
+		<figure class="card card-product-grid sc-product-item">
+			<div class="img-wrap">
+				<a href="product">
+					<img src="/ams_g202/images/products/couve_portuguesa.jpg" alt="" data-name="product_image">
+					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+				</a>
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<a href="product">
+					<div class="fix-height">
+						<p class="title" data-name="product_name">Couve Portuguesa</p>
+						<div class="price-wrap mt-2">
+							<span class="price">1,49€</span><small class="text-muted"> /kg</small>
+						</div> <!-- price-wrap.// -->
+					</div>
+				</a>
+				<div class="form-group">
+					<label class="small">Produtor:</label>
+					<select class="custom-select custom-select-sm" name="product_desc">
+						<option value="Cacial">Cacial</option>
+						<option value="Frusoal">Frusoal</option>
+						<option value="Parafrutas">Parafrutas</option>
+						<option value="Frutas Martinho">Frutas Martinho</option>
+						<option value="Frutas Tereso">Frutas Tereso</option>
+						<option value="MR Frutas">MR Frutas</option>
+					</select>
+				</div>
+				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+			</figcaption>
+			<input name="product_price" value="1.49" type="hidden">
+            <input name="product_id" value="2" type="hidden">
+		</figure>
+	</div> <!-- col.// -->
+
+	<div class="col-md-4">
+		<figure class="card card-product-grid sc-product-item">
+			<div class="img-wrap">
+				<a href="product">
+					<img src="/ams_g202/images/products/maca_gala.jpg" alt="" data-name="product_image">
+					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+				</a>
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<a href="product">
+					<div class="fix-height">
+						<p class="title" data-name="product_name">Maça Gala de Alcobaça</p>
+						<div class="price-wrap mt-2">
+							<span class="price">2,10€</span><small class="text-muted"> /kg</small>
+						</div> <!-- price-wrap.// -->
+					</div>
+				</a>
+				<div class="form-group">
+					<label class="small">Produtor:</label>
+					<select class="custom-select custom-select-sm" name="product_desc">
+						<option value="Cacial">Cacial</option>
+						<option value="Frusoal">Frusoal</option>
+						<option value="Parafrutas">Parafrutas</option>
+						<option value="Frutas Martinho">Frutas Martinho</option>
+						<option value="Frutas Tereso">Frutas Tereso</option>
+						<option value="MR Frutas">MR Frutas</option>
+					</select>
+				</div>
+				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+			</figcaption>
+			<input name="product_price" value="2.10" type="hidden">
+            <input name="product_id" value="1" type="hidden">
+		</figure>
+	</div> <!-- col.// -->
+</div> <!-- row end.// -->
+
+
+<nav class="mt-4 d-flex justify-content-center" aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	<li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+	<li class="page-item"><a class="page-link" href="#">9</a></li>
+    <li class="page-item"><a class="page-link" href="#">Seguinte</a></li>
+  </ul>
+</nav>
+
+	</main> <!-- col.// -->
+
+</div>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+	<footer class="section-footer border-top shadow pt-2 pb-2">
+		<div class="container">
+			<section class="footer-copyright d-flex align-items-center justify-content-between">
+				<p class="mt-0 pt-3 text-muted">© 2020 EcoMarket</p>
+				<div class="mt-0">
+					<a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					<a class="btn btn-icon btn-light" title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+					<a class="btn btn-icon btn-light" title="Twitter" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+				</div>
+			</section>
+		</div>
+	</footer>
+
+	<script>
+		$(document).ready(function(){
+			$('#smartcart').smartCart();
+		});
+
+		$('.sc-add-to-cart').click(function(){
+			$(this).hide();
+			$(this).next('.sc-remove-from-cart').show();
+		});
+
+		$('.sc-remove-from-cart').click(function(){
+			$('.sc-added-item').removeData("product-unique-key");
+			unique_key = $(this).parent().closest('.sc-added-item').data('product-unique-key');
+			console.log(unique_key);
+			$('#smartcart').smartCart('remove', unique_key);
+			$(this).hide();
+			$(this).prev('.sc-add-to-cart').show();
+		});
+
+		$('.custom-select-sm').on('change', function(){
+			$(this).closest('.sc-product-item').removeClass('sc-added-item');
+			$(this).closest('.form-group').next('.sc-add-to-cart').show();
+			$(this).closest('.form-group').next('.sc-add-to-cart').next('.sc-remove-from-cart').hide();
+		});
+	</script>
+
+</body>
+</html>
