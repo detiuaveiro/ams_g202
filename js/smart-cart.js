@@ -11,7 +11,7 @@
     // Default options
 
     var defaults = {
-        cart: [{"product_image":"https://via.placeholder.com/480/2AABD2/FFFFFF.jpg?text=EXEMPLO","product_name":"Exemplo de produto","product_desc":"Zé Manel","product_price":"6.50","product_id":"145","product_quantity":5,"unique_key":1609631970192}], // initial products on cart
+        cart: [], // initial products on cart
         resultName: 'cart_list', // Submit name of the cart parameter
         theme: 'default', // theme for the cart, related css need to include for other than default theme
         combineProducts: true, // combine similar products on cart
@@ -769,6 +769,12 @@
          */
         clear: function () {
             this._clearCart();
+        },
+        /* 
+         * Public function to clear the cart
+         */
+        remove: function (unique_key) {
+            this._removeFromCart(unique_key);
         }
     });
 
