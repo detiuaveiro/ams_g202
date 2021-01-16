@@ -153,7 +153,7 @@
             // Set the cart main element
             this.cartElement.addClass('sc-cart sc-theme-' + this.options.theme);
             this.cartElement.append('<div class="sc-cart-heading"><h4 class="card-title">' + this.options.lang.cartTitle + '</h4></div>');
-            this.cartElement.append('<table class="table table-borderless table-hover table-shopping-cart sc-cart-item-list"><thead class="text-muted">' + this.options.cartHeaderTemplate + '</thead><tbody></tbody></table>');
+            this.cartElement.append('<div class="table-responsive"><table class="table table-borderless table-hover table-shopping-cart sc-cart-item-list"><thead class="text-muted">' + this.options.cartHeaderTemplate + '</thead><tbody></tbody></table></div>');
         },
         /* 
          * Set the toolbar for the cart 
