@@ -74,7 +74,10 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"> <i class="fa fa-fw fa-lock"></i> </span>
 						</div>
-						<input id="password" name="password" class="form-control" placeholder="Palavra-passe" type="password" required>
+						<input id="password" name="password" class="form-control rounded-right" placeholder="Palavra-passe" type="password" required>
+						<div class="invalid-feedback text-center mt-2">
+							As credenciais introduzidas são inválidas.
+						</div>
 					</div>
 				</div>
 				
@@ -123,6 +126,11 @@
 
 	<script>
 		$(document).ready(function(){
+
+			if (window.location.search.indexOf('?') > -1){
+				$("#login #email, #login #password").addClass("is-invalid");
+			}
+
 			$('#login').on('submit', function(e){
 
 				if(typeof(Storage) !== "undefined"){
