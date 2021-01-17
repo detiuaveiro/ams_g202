@@ -75,9 +75,12 @@
 							<span class="input-group-text"> <i class="fa fa-fw fa-lock"></i> </span>
 						</div>
 						<input id="password" name="password" class="form-control rounded-right" placeholder="Palavra-passe" type="password" required>
-						<div class="invalid-feedback text-center mt-2">
+						<div class="invalid-feedback text-center mt-3">
 							As credenciais introduzidas são inválidas.
 						</div>
+					</div>
+					<div class="is-ready text-success small text-center mt-3 px-5" style="display: none;">
+						Por favor inicie sessão com as credenciais da conta que acabou de criar.
 					</div>
 				</div>
 				
@@ -127,8 +130,12 @@
 	<script>
 		$(document).ready(function(){
 
-			if (window.location.search.indexOf('?') > -1){
-				$("#login #email, #login #password").addClass("is-invalid");
+			if (window.location.search.indexOf('?type=') > -1){
+				// If form data starts with '?type=', then the user came from registration page and his account is created and ready to be used to sign in
+				$('.is-ready').show();
+			} else if (window.location.search.indexOf('?email=') > -1){
+				// If form data starts with '?email=', then the user came from login page and entered invalid login credentials
+				$('#login #email, #login #password').addClass('is-invalid');
 			}
 
 			$('#login').on('submit', function(e){
