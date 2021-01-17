@@ -43,7 +43,7 @@
         transitionsDuration: 0,
         quantityOptions: {
             min: 1,
-            max: 5,
+            max: 9,
             step: 1
         },
         paramSettings: { // Map the paramters
