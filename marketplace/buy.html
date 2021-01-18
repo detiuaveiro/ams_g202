@@ -279,10 +279,10 @@
 	</aside> <!-- col.// -->
 	<main class="col-md-9">
 
-<header class="border-bottom mb-4 mt-3 pb-3">
+<header class="border-bottom mb-4 mt-4 pb-3">
 		<div class="form-inline">
-			<span class="mr-md-auto"><b>52</b> produtos encontrados</span>
-			<select class="mr-2 form-control">
+			<span class="mr-md-auto ml-2 ml-sm-0"><b id="product_counter">0</b> produtos encontrados </span>
+			<select class="mx-2 my-2 my-sm-0 form-control">
 				<optgroup label="Relevância">
 					<option>Mais relevante</option>
 				</optgroup>
@@ -303,237 +303,20 @@
 					<option>Pior classificação</option>
 				</optgroup>
 			</select>
-			<div class="btn-group">
-				<a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="Vista de lista"> 
-					<i class="fa fa-bars"></i></a>
-				<a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="Vista de grelha"> 
-					<i class="fa fa-th"></i></a>
+			<div class="ml-2 ml-sm-0 btn-group">
+				<button class="btn btn-outline-secondary" data-toggle="tooltip" title="Vista de lista" id="list_view">
+					<i class="fa fa-bars"></i>
+				</button>
+				<button class="btn btn-outline-secondary active" data-toggle="tooltip" title="Vista de grelha" id="grid_view">
+					<i class="fa fa-th"></i>
+				</button>
 			</div>
 		</div>
 </header><!-- sect-heading -->
 
-<div class="row">
-	<div class="col-md-4">
-		<figure class="card card-product-grid sc-product-item">
-			<div class="img-wrap">
-				<a href="product">
-					<span class="badge badge-warning">NOVIDADE</span>
-					<img src="/ams_g202/images/products/laranja_algarve_1.jpg" alt="" data-name="product_image">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height">
-						<p class="title" data-name="product_name">Laranja do Algarve</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,49€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-					</div>
-				</a>
-				<div class="form-group">
-					<label class="small">Produtor:</label>
-					<select class="custom-select custom-select-sm" name="product_desc">
-						<option value="Cacial">Cacial</option>
-						<option value="Frusoal">Frusoal</option>
-						<option value="Parafrutas">Parafrutas</option>
-						<option value="Frutas Martinho">Frutas Martinho</option>
-						<option value="Frutas Tereso">Frutas Tereso</option>
-						<option value="MR Frutas">MR Frutas</option>
-					</select>
-				</div>
-				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-			</figcaption>
-			<input name="product_price" value="1.49" type="hidden">
-            <input name="product_id" value="6" type="hidden">
-		</figure>
-	</div> <!-- col.// -->
+<div class="row" id="buy">
 
-	<div class="col-md-4">
-		<figure class="card card-product-grid sc-product-item">
-			<div class="img-wrap">
-				<a href="product">
-					<span class="badge badge-danger">PROMOÇÃO</span><br>
-					<img src="/ams_g202/images/products/diospiro_persimmon.jpg" alt="" data-name="product_image">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height">
-						<p class="title" data-name="product_name">Dióspiro Persimmon</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,55€</span>
-							<del class="price-old">2,49€</del>
-							<small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-					</div>
-				</a>
-				<div class="form-group">
-					<label class="small">Produtor:</label>
-					<select class="custom-select custom-select-sm" name="product_desc">
-						<option value="Cacial">Cacial</option>
-						<option value="Frusoal">Frusoal</option>
-						<option value="Parafrutas">Parafrutas</option>
-						<option value="Frutas Martinho">Frutas Martinho</option>
-						<option value="Frutas Tereso">Frutas Tereso</option>
-						<option value="MR Frutas">MR Frutas</option>
-					</select>
-				</div>
-				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-			</figcaption>
-			<input name="product_price" value="1.55" type="hidden">
-            <input name="product_id" value="5" type="hidden">
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4">
-		<figure class="card card-product-grid sc-product-item">
-			<div class="img-wrap">
-				<a href="product">
-					<img src="/ams_g202/images/products/nabica.jpg" alt="" data-name="product_image">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height">
-						<p class="title" data-name="product_name">Nabiças</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,99€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-					</div>
-				</a>
-				<div class="form-group">
-					<label class="small">Produtor:</label>
-					<select class="custom-select custom-select-sm" name="product_desc">
-						<option value="Cacial">Cacial</option>
-						<option value="Frusoal">Frusoal</option>
-						<option value="Parafrutas">Parafrutas</option>
-						<option value="Frutas Martinho">Frutas Martinho</option>
-						<option value="Frutas Tereso">Frutas Tereso</option>
-						<option value="MR Frutas">MR Frutas</option>
-					</select>
-				</div>
-				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-			</figcaption>
-			<input name="product_price" value="1.99" type="hidden">
-            <input name="product_id" value="4" type="hidden">
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4">
-		<figure class="card card-product-grid sc-product-item">
-			<div class="img-wrap">
-				<a href="product">
-					<img src="/ams_g202/images/products/roma.jpg" alt="" data-name="product_image">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height">
-						<p class="title" data-name="product_name">Romã</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,59€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-					</div>
-				</a>
-				<div class="form-group">
-					<label class="small">Produtor:</label>
-					<select class="custom-select custom-select-sm" name="product_desc">
-						<option value="Cacial">Cacial</option>
-						<option value="Frusoal">Frusoal</option>
-						<option value="Parafrutas">Parafrutas</option>
-						<option value="Frutas Martinho">Frutas Martinho</option>
-						<option value="Frutas Tereso">Frutas Tereso</option>
-						<option value="MR Frutas">MR Frutas</option>
-					</select>
-				</div>
-				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-			</figcaption>
-			<input name="product_price" value="1.59" type="hidden">
-            <input name="product_id" value="3" type="hidden">
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4">
-		<figure class="card card-product-grid sc-product-item">
-			<div class="img-wrap">
-				<a href="product">
-					<img src="/ams_g202/images/products/couve_portuguesa.jpg" alt="" data-name="product_image">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height">
-						<p class="title" data-name="product_name">Couve Portuguesa</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,49€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-					</div>
-				</a>
-				<div class="form-group">
-					<label class="small">Produtor:</label>
-					<select class="custom-select custom-select-sm" name="product_desc">
-						<option value="Cacial">Cacial</option>
-						<option value="Frusoal">Frusoal</option>
-						<option value="Parafrutas">Parafrutas</option>
-						<option value="Frutas Martinho">Frutas Martinho</option>
-						<option value="Frutas Tereso">Frutas Tereso</option>
-						<option value="MR Frutas">MR Frutas</option>
-					</select>
-				</div>
-				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-			</figcaption>
-			<input name="product_price" value="1.49" type="hidden">
-            <input name="product_id" value="2" type="hidden">
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4">
-		<figure class="card card-product-grid sc-product-item">
-			<div class="img-wrap">
-				<a href="product">
-					<img src="/ams_g202/images/products/maca_gala.jpg" alt="" data-name="product_image">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height">
-						<p class="title" data-name="product_name">Maça Gala de Alcobaça</p>
-						<div class="price-wrap mt-2">
-							<span class="price">2,10€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-					</div>
-				</a>
-				<div class="form-group">
-					<label class="small">Produtor:</label>
-					<select class="custom-select custom-select-sm" name="product_desc">
-						<option value="Cacial">Cacial</option>
-						<option value="Frusoal">Frusoal</option>
-						<option value="Parafrutas">Parafrutas</option>
-						<option value="Frutas Martinho">Frutas Martinho</option>
-						<option value="Frutas Tereso">Frutas Tereso</option>
-						<option value="MR Frutas">MR Frutas</option>
-					</select>
-				</div>
-				<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-				<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-			</figcaption>
-			<input name="product_price" value="2.10" type="hidden">
-            <input name="product_id" value="1" type="hidden">
-		</figure>
-	</div> <!-- col.// -->
-</div> <!-- row end.// -->
-
+</div>
 
 <nav class="mt-4 d-flex justify-content-center" aria-label="Page navigation">
   <ul class="pagination">
@@ -567,29 +350,141 @@
 		</div>
 	</footer>
 
+	<!-- ########## TODO ########## -->
+	<script>
+
+		var products = [
+			{
+				id: "1",
+				new: "",
+				sale: "",
+				old_price: "",
+				image: "/ams_g202/images/products/maca_gala.jpg",
+				name: "Maça Gala de Alcobaça",
+				price: "2,10",
+				producer: "Peça de Fruta",
+				quantity_left: "14"
+			},
+			{
+				id: "2",
+				new: "",
+				sale: "",
+				old_price: "",
+				image: "/ams_g202/images/products/couve_portuguesa.jpg",
+				name: "Couve Portuguesa",
+				price: "1,49",
+				producer: "Horta da Torre",
+				quantity_left: "21"
+			},
+			{
+				id: "3",
+				new: "",
+				sale: "",
+				old_price: "",
+				image: "/ams_g202/images/products/roma.jpg",
+				name: "Romã",
+				price: "1,59",
+				producer: "Frusoal",
+				quantity_left: "9"
+			},
+			{
+				id: "4",
+				new: "",
+				sale: "",
+				old_price: "",
+				image: "/ams_g202/images/products/nabica.jpg",
+				name: "Nabiças",
+				price: "1,99",
+				producer: "Quinta do Funcho",
+				quantity_left: "9"
+			},
+			{
+				id: "5",
+				new: "",
+				sale: "PROMOÇÃO",
+				old_price: "2,49",
+				image: "/ams_g202/images/products/diospiro_persimmon.jpg",
+				name: "Dióspiro Persimmon",
+				price: "1,55",
+				producer: "Frutalmente",
+				quantity_left: "9"
+			},
+			{
+				id: "6",
+				new: "NOVIDADE",
+				sale: "",
+				old_price: "",
+				image: "/ams_g202/images/products/laranja_algarve_1.jpg",
+				name: "Laranja do Algarve",
+				price: "1,49",
+				producer: "Cacial",
+				quantity_left: "9"
+			}
+		];
+
+		// ########## LOCAL STORAGE DATA ##########
+		products = JSON.stringify(products.reverse());
+
+		products = JSON.parse(products);
+
+		$("#product_counter").text(Object.keys(products).length);
+
+		for (var key in products){
+			if (products.hasOwnProperty(key)){
+				$("#buy").append(`
+					<div class="col-lg-4 col-sm-6">
+						<figure class="card card-product-grid sc-product-item">
+							<div class="img-wrap">
+								<a href="product?id=`+ products[key].id +`">
+									<span class="badge badge-warning">`+ products[key].new +`</span>
+									<span class="badge badge-danger">`+ products[key].sale +`</span>
+									<img src="`+ products[key].image +`" alt="" data-name="product_image">
+									<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+								</a>
+							</div>
+							<figcaption class="info-wrap">
+								<a href="product?id=`+ products[key].id +`">
+									<p class="title mb-1" data-name="product_name">`+ products[key].name +`</p>
+									<p class="font-weigh small text-muted mb-3">Produtor: <span data-name="product_desc">`+ products[key].producer +`</span></p>
+									<div class="price-wrap mb-3">
+										<span class="price">`+ products[key].price +`€</span>
+										<del class="`+ (products[key].sale).toLowerCase().slice(0, 5) +` price-old" style="display: none;">`+ products[key].old_price +`€</del>
+										<small class="text-muted"> /kg</small>
+									</div>
+								</a>
+								<div class="form-inline mb-3">
+									<label class="small mr-2" for="quantity">Quantidade: </label>
+									<input class="form-control form-control-sm" id="quantity" name="product_quantity" min="1" max="9" value="1" type="number">
+									<label class="small ml-2" for="quantity">kg</label>
+								</div>
+								<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+								<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+							</figcaption>
+							<input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
+							<input name="product_id" value="`+ products[key].id +`" type="hidden">
+						</figure>
+					</div>
+				`);
+			}
+		}
+
+	</script>
+	<!-- ########## END TODO ########## -->
+
 	<script>
 		$(document).ready(function(){
 			$('#smartcart').smartCart();
 		});
 
 		$('.sc-add-to-cart').click(function(){
-			$(this).hide();
-			$(this).next('.sc-remove-from-cart').show();
+			$(this).hide().next('.sc-remove-from-cart').show();
 		});
 
 		$('.sc-remove-from-cart').click(function(){
 			$('.sc-added-item').removeData("product-unique-key");
 			unique_key = $(this).parent().closest('.sc-added-item').data('product-unique-key');
-			console.log(unique_key);
 			$('#smartcart').smartCart('remove', unique_key);
-			$(this).hide();
-			$(this).prev('.sc-add-to-cart').show();
-		});
-
-		$('.custom-select-sm').on('change', function(){
-			$(this).closest('.sc-product-item').removeClass('sc-added-item');
-			$(this).closest('.form-group').next('.sc-add-to-cart').show();
-			$(this).closest('.form-group').next('.sc-add-to-cart').next('.sc-remove-from-cart').hide();
+			$(this).hide().prev('.sc-add-to-cart').show();
 		});
 	</script>
 
