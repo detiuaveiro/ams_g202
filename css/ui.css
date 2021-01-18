@@ -882,9 +882,6 @@ a[class*=card]:hover .title {
 .card-product-grid .topbar a:hover {
   color: #3167eb;
 }
-.card-product-grid .fix-height {
-  margin-bottom: 0.5rem;
-}
 .card-product-grid .btn-overlay {
   transition: 0.5s;
   opacity: 0;
@@ -1056,6 +1053,7 @@ a[class*=card]:hover .title {
 .price {
   font-weight: 600;
   color: #212529;
+  font-size: 120%;
 }
 
 .price-old {
@@ -1589,6 +1587,10 @@ a:hover{
 
 .dropdown-menu {
   z-index: 1100;
+}
+
+.promo{
+  display: initial !important;
 }
 
 /*!
