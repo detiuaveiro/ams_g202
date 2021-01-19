@@ -1674,12 +1674,6 @@ body.loading .loading-modal {
   display: block
 }
 
-.title {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
 .dropzone {
   height: 200px;
   position: relative;
@@ -1688,7 +1682,7 @@ body.loading .loading-modal {
   max-width: 100%;
 }
 
-.info {
+.dropzone .info {
   margin-top: 25%;
 }
 
@@ -1698,7 +1692,7 @@ body.loading .loading-modal {
   width: 100%
 }
 
-.input {
+.dropzone .input {
   height: 100%;
   left: 0;
   outline: 0;
@@ -1716,12 +1710,12 @@ body.loading .loading-modal {
   margin-right: auto;
 }
 
-.image-url {
+.status .image-url {
   width: 100%;
 }
 
 .dropzone.dropzone-dragging {
-  border-color: #000
+  border-color: #000;
 }
 
 .loading-modal {
@@ -1747,14 +1741,14 @@ body.loading .loading-modal {
 }
 
 @media screen and (min-width: 300px) and (max-width: 700px) {  
-  .info {
-      margin-top: 30%;
+  .dropzone .info {
+    margin-top: 30%;
   }
-  
+
   .loading-table {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 50%;
-      margin-bottom: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+    margin-bottom: 50%;
   }
 }
