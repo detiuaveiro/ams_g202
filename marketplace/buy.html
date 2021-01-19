@@ -10,7 +10,9 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/ams_g202/favicon-16x16.png">
 	<link rel="icon" type="image/x-icon" href="/ams_g202/favicon.ico">
 
-  	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+	  
+	<script src="/ams_g202/js/products.js"></script>
 
   	<script src="/ams_g202/js/bootstrap.bundle.min.js"></script>
 	<link href="/ams_g202/css/bootstrap.css" rel="stylesheet">
@@ -350,128 +352,52 @@
 		</div>
 	</footer>
 
-	<!-- ########## TODO ########## -->
 	<script>
+		$(document).ready(function(){
+			// Set total number of products
+			$("#product_counter").text(Object.keys(products).length);
 
-		var products = [
-			{
-				id: "1",
-				new: "",
-				sale: "",
-				old_price: "",
-				image: "/ams_g202/images/products/maca_gala.jpg",
-				name: "Maça Gala de Alcobaça",
-				price: "2,10",
-				producer: "Peça de Fruta",
-				quantity_left: "14"
-			},
-			{
-				id: "2",
-				new: "",
-				sale: "",
-				old_price: "",
-				image: "/ams_g202/images/products/couve_portuguesa.jpg",
-				name: "Couve Portuguesa",
-				price: "1,49",
-				producer: "Horta da Torre",
-				quantity_left: "21"
-			},
-			{
-				id: "3",
-				new: "",
-				sale: "",
-				old_price: "",
-				image: "/ams_g202/images/products/roma.jpg",
-				name: "Romã",
-				price: "1,59",
-				producer: "Frusoal",
-				quantity_left: "9"
-			},
-			{
-				id: "4",
-				new: "",
-				sale: "",
-				old_price: "",
-				image: "/ams_g202/images/products/nabica.jpg",
-				name: "Nabiças",
-				price: "1,99",
-				producer: "Quinta do Funcho",
-				quantity_left: "9"
-			},
-			{
-				id: "5",
-				new: "",
-				sale: "PROMOÇÃO",
-				old_price: "2,49",
-				image: "/ams_g202/images/products/diospiro_persimmon.jpg",
-				name: "Dióspiro Persimmon",
-				price: "1,55",
-				producer: "Frutalmente",
-				quantity_left: "9"
-			},
-			{
-				id: "6",
-				new: "NOVIDADE",
-				sale: "",
-				old_price: "",
-				image: "/ams_g202/images/products/laranja_algarve_1.jpg",
-				name: "Laranja do Algarve",
-				price: "1,49",
-				producer: "Cacial",
-				quantity_left: "9"
-			}
-		];
-
-		// ########## LOCAL STORAGE DATA ##########
-		products = JSON.stringify(products.reverse());
-
-		products = JSON.parse(products);
-
-		$("#product_counter").text(Object.keys(products).length);
-
-		for (var key in products){
-			if (products.hasOwnProperty(key)){
-				$("#buy").append(`
-					<div class="col-lg-4 col-sm-6">
-						<figure class="card card-product-grid sc-product-item">
-							<div class="img-wrap">
-								<a href="product?id=`+ products[key].id +`">
-									<span class="badge badge-warning">`+ products[key].new +`</span>
-									<span class="badge badge-danger">`+ products[key].sale +`</span>
-									<img src="`+ products[key].image +`" alt="" data-name="product_image">
-									<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-								</a>
-							</div>
-							<figcaption class="info-wrap">
-								<a href="product?id=`+ products[key].id +`">
-									<p class="title mb-1" data-name="product_name">`+ products[key].name +`</p>
-									<p class="font-weigh small text-muted mb-3">Produtor: <span data-name="product_desc">`+ products[key].producer +`</span></p>
-									<div class="price-wrap mb-3">
-										<span class="price">`+ products[key].price +`€</span>
-										<del class="`+ (products[key].sale).toLowerCase().slice(0, 5) +` price-old" style="display: none;">`+ products[key].old_price +`€</del>
-										<small class="text-muted"> /kg</small>
-									</div>
-								</a>
-								<div class="form-inline mb-3">
-									<label class="small mr-2" for="quantity">Quantidade: </label>
-									<input class="form-control form-control-sm" id="quantity" name="product_quantity" min="1" max="9" value="1" type="number">
-									<label class="small ml-2" for="quantity">kg</label>
+			// Display every product on the list
+			for (var key in products){
+				if (products.hasOwnProperty(key)){
+					$("#buy").append(`
+						<div class="col-lg-4 col-sm-6">
+							<figure class="card card-product-grid sc-product-item">
+								<div class="img-wrap">
+									<a href="product?id=`+ products[key].id +`">
+										<span class="badge badge-warning">`+ products[key].new +`</span>
+										<span class="badge badge-danger">`+ products[key].sale +`</span>
+										<img src="`+ products[key].image +`" alt="" data-name="product_image">
+										<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+									</a>
 								</div>
-								<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
-								<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
-							</figcaption>
-							<input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
-							<input name="product_id" value="`+ products[key].id +`" type="hidden">
-						</figure>
-					</div>
-				`);
+								<figcaption class="info-wrap">
+									<a href="product?id=`+ products[key].id +`">
+										<p class="title mb-1" data-name="product_name">`+ products[key].name +`</p>
+										<p class="font-weigh small text-muted mb-3">Produtor: <span data-name="product_desc">`+ products[key].producer +`</span></p>
+										<div class="price-wrap mb-3">
+											<span class="price">`+ products[key].price +`€</span>
+											<del class="`+ (products[key].sale).toLowerCase().slice(0, 5) +` price-old" style="display: none;">`+ products[key].old_price +`€</del>
+											<small class="text-muted"> /kg</small>
+										</div>
+									</a>
+									<div class="form-inline mb-3">
+										<label class="small mr-2" for="quantity">Quantidade: </label>
+										<input class="form-control form-control-sm" id="quantity" name="product_quantity" min="1" max="9" value="1" type="number">
+										<label class="small ml-2" for="quantity">kg</label>
+									</div>
+									<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+									<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+								</figcaption>
+								<input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
+								<input name="product_id" value="`+ products[key].id +`" type="hidden">
+							</figure>
+						</div>
+					`);
+				}
 			}
-		}
+		});
 
-	</script>
-	<!-- ########## END TODO ########## -->
-
-	<script>
 		$(document).ready(function(){
 			$('#smartcart').smartCart();
 		});
