@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  	<title>Produto | EcoMarket</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/ams_g202/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/ams_g202/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/ams_g202/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="/ams_g202/favicon.ico">
+
+	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+	  
+	<script src="/ams_g202/js/products.js"></script>
+
+  	<script src="/ams_g202/js/bootstrap.bundle.min.js"></script>
+	<link href="/ams_g202/css/bootstrap.css" rel="stylesheet">
+	  
+	<script src="/ams_g202/js/universal-parallax.min.js"></script>
+	<script src="/ams_g202/js/smart-cart.js"></script>
+
+  	<link href="/ams_g202/fonts/fontawesome/css/all.min.css" rel="stylesheet">
+  	<link href="/ams_g202/fonts/feathericons/css/iconfont.css" rel="stylesheet">
+  	<link href="/ams_g202/fonts/material-icons/css/materialdesignicons.css" rel="stylesheet">
+
+  	<link href="/ams_g202/css/ui.css" rel="stylesheet">
+  	<script src="/ams_g202/js/script.js"></script>
+</head>
+<body>
+	<header class="section-header">
+		<section class="header-main border-bottom">
+			<div class="container">
+
+				<!-- SMARTCART PLUGIN -->
+				<div id="smartcart" class="d-none"></div>
+
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-3 col-sm-4 col-md-4 col-5">
+						<a class="navbar-brand" href="/ams_g202/marketplace/">
+							<img src="/ams_g202/images/logo.svg" class="logo" alt="">
+							<span class="font-weight-bolder text-success">Eco</span>Market
+						</a>
+					</div>
+					<div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+							<form action="#" class="search">
+								<div class="input-group w-100">
+									<input type="search" name="search" autocomplete="off" class="form-control" style="width:55%;" placeholder="Procurar produto..." required>
+									<div class="input-group-append">
+									<button class="btn btn-primary" type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+									</div>
+								</div>
+							</form> <!-- search-wrap .end// -->
+					</div>
+					<div class="col-lg-3 col-sm-8 col-md-4 col-7">
+						<div class="d-flex justify-content-end">
+							<a href="cart" class="widget-header mr-3"  data-toggle="tooltip" data-placement="bottom" title="Carrinho">
+								<div class="icon">
+									<i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
+									<span class="notify">0</span>
+								</div>
+							</a>
+				
+							<div class="widget-header dropdown">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+									<div class="icon icon-sm rounded-circle border" data-toggle="tooltip" data-placement="bottom" title="Menu">
+										<i class="fa fa-user"></i>
+									</div>
+									<span class="sr-only">Ações</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="account_customer">Conta</a>
+									<a class="dropdown-item" href="orders">Encomendas</a>
+									<hr class="dropdown-divider">
+									<a class="dropdown-item" href="#">Definições</a>
+									<hr class="dropdown-divider">
+									<a class="dropdown-item" href="login">Terminar sessão</a>
+								</div> <!--  dropdown-menu .// -->
+							</div>  <!-- widget-header .// -->
+						</div> <!-- widgets-wrap.// -->
+					</div>
+				</div>
+			</div> <!-- container.// -->
+		</section> <!-- header-main .// -->
+		
+		<nav class="navbar navbar-expand-md navbar-main border-bottom d-md-none">
+		  <div class="container justify-content-center">
+				<form class="col-12 col-sm-8 my-2">
+					<div class="input-group">
+						<input type="search" name="search" autocomplete="off" class="form-control" placeholder="Procurar..." required>
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			   </div> <!-- collapse .// -->
+		  </div> <!-- container .// -->
+		</nav>
+		
+	</header> <!-- section-header.// -->
+
+
+
+<section class="section-content padding-y bg">
+<div class="container">
+
+	<!-- ########## TODO: Improve product not found message ########## -->
+	<h1 id="not-found">Este produto já não está disponível.</h1>
+
+<!-- ============================ PRODUCT DETAIL ================================= -->
+<div class="card sc-product-item">
+	<div class="row no-gutters align-items-center">
+		<aside class="col-md-6">
+			<article class="gallery-wrap"> 
+				<div class="img-big-wrap">
+					<a href="#"><img src="/ams_g202/images/products/laranja_algarve_1.jpg" class="img-fluid h-auto" alt="" data-name="product_image"></a>
+				</div>
+				<div class="thumbs-wrap">
+					<a href="#" class="item-thumb"><img src="/ams_g202/images/products/laranja_algarve_1.jpg" alt=""></a>
+				</div>
+			</article>
+		</aside>
+		<main class="col-md-6 border-left">
+			<article class="content-body">
+
+				<h2 class="title" data-name="product_name">Laranja do Algarve</h2>
+
+				<ul class="list-check pt-1">
+					<li class="text-success">Disponível para encomenda</li>
+				</ul>
+				<!--<ul class="list-dots pt-1">
+					<li class="text-muted">Indisponível de momento</li>
+				</ul>-->
+
+				<div class="rating-wrap my-3">
+					<ul class="rating-stars">
+						<li style="width:90%" class="stars-active">
+							<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+						</li>
+						<li>
+							<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+						</li>
+					</ul>
+					<small class="label-rating text-muted">5 avaliações</small>
+					<small class="label-rating text-primary"><i class="fa fa-clipboard-check"></i> 96 encomendas</small>
+				</div>
+
+				<div class="mb-3">
+					<var class="price h4">1,49€</var><span class="text-muted"> /kg</span>
+				</div>
+
+				<p class="text-justify">A variedade Newhall é um fruto de tamanho médio a grande, com forma oblonga a elipsóide, "umbigo" pequeno e casca cor de laranja intenso. A polpa é de textura média e sabor agradável, com 10 a 12 gomos e não contém sementes. A época de maturação vai de outubro a fevereiro.</p>
+
+				<dl class="row">
+					<dt class="col">Produtor:</dt>
+					<dd class="col-sm-9" data-name="product_desc">Cacial</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Origem:</dt>
+					<dd class="col-sm-9">Algarve (Portugal)</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Variedade:</dt>
+					<dd class="col-sm-9">Newhall</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Época:</dt>
+					<dd class="col-sm-9">Outubro - Fevereiro</dd>
+				</dl>
+
+				<hr>
+				<form id="product" action="checkout">
+					<div class="row justify-content-between align-items-end">
+						<div class="col-md flex-grow-0">
+							<label>Quantidade (kg):</label>
+							<div class="input-group input-spinner mb-3 mb-lg-1">
+								<div class="input-group-prepend">
+									<button class="btn btn-light" type="button" id="button-minus">&#8722;</button>
+								</div>
+								<div class="input-group-append input-group-prepend">
+									<input type="text" name="product_quantity" maxlength="1" pattern="[1-9]" class="btn btn-light font-weight-bolder" value="1" title="Apenas quantidades inteiras de 1 a 9" autocomplete="off" required>
+								</div>
+								<div class="input-group-append">
+									<button class="btn btn-light" type="button" id="button-plus">+</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg">
+							<button type="submit" class="btn btn-primary mb-1 sc-add-to-cart">Comprar agora</button>
+							<button type="button" id="add-cart" class="btn btn-outline-primary ml-xl-2 mb-1 sc-add-to-cart">Adicionar ao carrinho <i class="fas fa-shopping-cart"></i></button>
+							<button type="button" class="btn btn-outline-danger ml-xl-2 mb-1 sc-remove-from-cart" style="display: none;">Remover do carrinho <i class="fas fa-shopping-cart"></i></button>
+						</div>
+					</div>
+				</form>
+				<!-- <input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
+				<input name="product_id" value="`+ products[key].id +`" type="hidden"> -->
+				<input name="product_price" value="1.49" type="hidden">
+				<input name="product_id" value="6" type="hidden">
+			</article>
+		</main>
+	</div>
+</div>
+<!-- ============================ PRODUCT DETAIL END .// ================================= -->
+
+<div class="row ml-1 mt-4">
+	<div class="col-md-9">
+
+<header class="section-heading">
+<h3>Feedback</h3>  
+<div class="rating-wrap">
+	<ul class="rating-stars stars-lg">
+		<li style="width:90%" class="stars-active">
+			<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+		</li>
+		<li>
+			<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+		</li>
+	</ul>
+	<strong class="label-rating text-lg">4.6 <span class="text-muted">| 5 avaliações</span></strong>
+</div>
+</header>
+
+<article class="box mb-3">
+<div class="icontext w-100">
+	<img src="/ams_g202/images/avatars/avatar_3.jpg" class="img-xs icon rounded-circle">
+	<div class="text">
+		<span class="date text-muted float-right">08/12/2020</span>  
+		<h6 class="mb-1">Lucinda Alves</h6>
+		<ul class="rating-stars">
+			<li style="width:100%" class="stars-active">
+				<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+			</li>
+			<li>
+				<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+			</li>
+		</ul>
+		<span class="label-rating text-warning">5</span>
+	</div>
+</div>
+<div class="mt-3">
+	<h6>Não tem sementes, perfeito para as minhas crianças!!</h6>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>	
+</div>
+</article>
+
+<article class="box mb-3">
+	<div class="icontext w-100">
+		<img src="/ams_g202/images/avatars/avatar_1.jpg" class="img-xs icon rounded-circle">
+		<div class="text">
+			<span class="date text-muted float-right">02/12/2020</span>  
+			<h6 class="mb-1">Rui Marques</h6>
+			<ul class="rating-stars">
+				<li style="width:80%" class="stars-active">
+					<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+				</li>
+				<li>
+					<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+				</li>
+			</ul>
+			<span class="label-rating text-warning">4</span>
+		</div>
+	</div>
+</article>
+
+<article class="box mb-3">
+<div class="icontext w-100">
+	<img src="/ams_g202/images/avatars/avatar.jpg" class="img-xs icon rounded-circle">
+	<div class="text">
+		<span class="date text-muted float-right">24/11/2020</span>  
+		<h6 class="mb-1">Paula Ferreira</h6>
+		<ul class="rating-stars">
+			<li style="width:100%" class="stars-active">
+				<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+			</li>
+			<li>
+				<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+			</li>
+		</ul>
+		<span class="label-rating text-warning">5</span>
+	</div>
+</div>
+<div class="mt-3">
+	<h6>O que é nacional é bom &#x1F61C;</h6>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
+</div>
+</article>
+
+<article class="box mb-3">
+<div class="icontext w-100">
+	<img src="/ams_g202/images/avatars/avatar_4.jpg" class="img-xs icon rounded-circle">
+	<div class="text">
+		<span class="date text-muted float-right">03/11/2020</span>  
+		<h6 class="mb-1">Rodrigo Costa</h6>
+		<ul class="rating-stars">
+			<li style="width:100%" class="stars-active">
+				<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+			</li>
+			<li>
+				<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+			</li>
+		</ul>
+		<span class="label-rating text-warning">5</span>
+	</div>
+</div>
+<div class="mt-3">
+	<h6>Laranjas bem saborosas &#x1F44C;</h6>	
+</div>
+</article>
+
+<article class="box mb-3">
+	<div class="icontext w-100">
+		<img src="/ams_g202/images/avatars/avatar_2.jpg" class="img-xs icon rounded-circle">
+		<div class="text">
+			<span class="date text-muted float-right">29/10/2020</span>  
+			<h6 class="mb-1">Paula Estevão</h6>
+			<ul class="rating-stars">
+				<li style="width:80%" class="stars-active">
+					<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+				</li>
+				<li>
+					<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+				</li>
+			</ul>
+			<span class="label-rating text-warning">4</span>
+		</div>
+	</div>
+</article>
+
+</div>
+</div>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+	<footer class="section-footer border-top shadow pt-2 pb-2">
+		<div class="container">
+			<section class="footer-copyright d-flex align-items-center justify-content-between">
+				<p class="mt-0 pt-3 text-muted">© 2020 EcoMarket</p>
+				<div class="mt-0">
+					<a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					<a class="btn btn-icon btn-light" title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+					<a class="btn btn-icon btn-light" title="Twitter" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+				</div>
+			</section>
+		</div>
+	</footer>
+
+	<script>
+		$(document).ready(function(){
+			var vars = window.location.search.substring(1).split("?");
+			for (var i = 0; i < vars.length; i++){
+				var pair = vars[i].split("=");
+				// Get product details from the form data on the '?id=' field
+				if (pair[0] == "id" && pair[1] != undefined && pair[1] != ""){
+					for (var key in products){
+						// Search through all the products in the list and check which product has that ID
+						if (products.hasOwnProperty(key) && products[key].id == pair[1]){
+							console.log("Product found! Name: " + products[key].name);
+							// Hide product not found message if product is found
+							$('#not-found').hide();
+
+							// ########## TODO: Display product details and reviews dynamically ##########
+						}
+					}
+				}
+			}
+		});
+
+		$(document).ready(function(){
+			$('#smartcart').smartCart();
+		});
+
+		$('#add-cart.sc-add-to-cart').click(function(){
+			$(this).hide().next('.sc-remove-from-cart').show();
+		});
+
+		$('.sc-remove-from-cart').click(function(){
+			$('.sc-added-item').removeData("product-unique-key");
+			unique_key = $(this).parent().closest('.sc-added-item').data('product-unique-key');
+			$('#smartcart').smartCart('remove', unique_key);
+			$(this).hide().prev('#add-cart.sc-add-to-cart').show();
+		});
+
+		$("#product #button-minus").click(function(){
+			let value = $('#product input[name=product_quantity]').val();
+			if (value > 1){
+				$('#product input[name=product_quantity]').val(--value);
+			} else{
+				$('#product input[name=product_quantity]').val(1);
+			}
+		});
+		$("#product #button-plus").click(function(){
+			let value = $('#product input[name=product_quantity]').val();
+			if (value < 9){
+				$('#product input[name=product_quantity]').val(++value);
+			} else{
+				$('#product input[name=product_quantity]').val(9);
+			}
+		});
+	</script>
+
+</body>
+</html>
