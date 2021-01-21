@@ -360,6 +360,10 @@ article:after,
 }
 
 /* --------------------- titles ---------------------- */
+.section-content.padding-y.bg{
+  min-height: 85vh !important;
+}
+
 .section-heading {
   margin-bottom: 20px;
   margin-top: 15px;
