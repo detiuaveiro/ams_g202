@@ -9,5 +9,5 @@ if(typeof(Storage) !== "undefined"){
     }
 } else{
     // Browser does not support web storage
-    window.location.replace("/ams_g202/marketplace/no-js");
+    window.location.replace("/ams_g202/marketplace/error");
 }
