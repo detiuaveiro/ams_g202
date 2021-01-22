@@ -112,227 +112,17 @@
 		<a href="/ams_g202/marketplace/"><button class="btn btn-primary mt-4">Voltar para a página inicial da loja</button></a>
 	</header>
 
+
 <!-- ============================ PRODUCT DETAIL ================================= -->
-<div class="card sc-product-item">
-	<div class="row no-gutters align-items-center">
-		<aside class="col-md-6">
-			<article class="gallery-wrap"> 
-				<div class="img-big-wrap">
-					<a href="#"><img src="/ams_g202/images/products/laranja_algarve_1.jpg" class="img-fluid h-auto" alt="" data-name="product_image"></a>
-				</div>
-				<div class="thumbs-wrap">
-					<a href="#" class="item-thumb"><img src="/ams_g202/images/products/laranja_algarve_1.jpg" alt=""></a>
-				</div>
-			</article>
-		</aside>
-		<main class="col-md-6 border-left">
-			<article class="content-body">
-
-				<h2 class="title" data-name="product_name">Laranja do Algarve</h2>
-
-				<ul class="list-check pt-1">
-					<li class="text-success">Disponível para encomenda</li>
-				</ul>
-				<!--<ul class="list-dots pt-1">
-					<li class="text-muted">Indisponível de momento</li>
-				</ul>-->
-
-				<div class="rating-wrap my-3">
-					<ul class="rating-stars">
-						<li style="width:90%" class="stars-active">
-							<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-						</li>
-						<li>
-							<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-						</li>
-					</ul>
-					<small class="label-rating text-muted">5 avaliações</small>
-					<small class="label-rating text-primary"><i class="fa fa-clipboard-check"></i> 96 encomendas</small>
-				</div>
-
-				<div class="mb-3">
-					<var class="price h4">1,49€</var><span class="text-muted"> /kg</span>
-				</div>
-
-				<p class="text-justify">A variedade Newhall é um fruto de tamanho médio a grande, com forma oblonga a elipsóide, "umbigo" pequeno e casca cor de laranja intenso. A polpa é de textura média e sabor agradável, com 10 a 12 gomos e não contém sementes. A época de maturação vai de outubro a fevereiro.</p>
-
-				<dl class="row">
-					<dt class="col">Produtor:</dt>
-					<dd class="col-sm-9" data-name="product_desc">Cacial</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Origem:</dt>
-					<dd class="col-sm-9">Algarve (Portugal)</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Variedade:</dt>
-					<dd class="col-sm-9">Newhall</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Época:</dt>
-					<dd class="col-sm-9">Outubro - Fevereiro</dd>
-				</dl>
-
-				<hr>
-				<form id="product" action="checkout">
-					<div class="row justify-content-between align-items-end">
-						<div class="col-md flex-grow-0">
-							<label>Quantidade (kg):</label>
-							<div class="input-group input-spinner mb-3 mb-lg-1">
-								<div class="input-group-prepend">
-									<button class="btn btn-light" type="button" id="button-minus">&#8722;</button>
-								</div>
-								<div class="input-group-append input-group-prepend">
-									<input type="text" name="product_quantity" maxlength="1" pattern="[1-9]" class="btn btn-light font-weight-bolder" value="1" title="Apenas quantidades inteiras de 1 a 9" autocomplete="off" required>
-								</div>
-								<div class="input-group-append">
-									<button class="btn btn-light" type="button" id="button-plus">+</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg">
-							<button type="submit" class="btn btn-primary mb-1 sc-add-to-cart">Comprar agora</button>
-							<button type="button" id="add-cart" class="btn btn-outline-primary ml-xl-2 mb-1 sc-add-to-cart">Adicionar ao carrinho <i class="fas fa-shopping-cart"></i></button>
-							<button type="button" class="btn btn-outline-danger ml-xl-2 mb-1 sc-remove-from-cart" style="display: none;">Remover do carrinho <i class="fas fa-shopping-cart"></i></button>
-						</div>
-					</div>
-				</form>
-				<!-- <input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
-				<input name="product_id" value="`+ products[key].id +`" type="hidden"> -->
-				<input name="product_price" value="1.49" type="hidden">
-				<input name="product_id" value="6" type="hidden">
-			</article>
-		</main>
-	</div>
-</div>
+<div id="product-detail"></div>
 <!-- ============================ PRODUCT DETAIL END .// ================================= -->
 
+<!-- ============================ PRODUCT FEEDBACK ================================= -->
 <div class="row ml-1 mt-4">
-	<div class="col-md-9">
+	<div class="col-md-9" id="product-feedback"></div>
+</div>
 
-<header class="section-heading">
-<h3>Feedback</h3>  
-<div class="rating-wrap">
-	<ul class="rating-stars stars-lg">
-		<li style="width:90%" class="stars-active">
-			<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-		</li>
-		<li>
-			<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-		</li>
-	</ul>
-	<strong class="label-rating text-lg">4.6 <span class="text-muted">| 5 avaliações</span></strong>
-</div>
-</header>
-
-<article class="box mb-3">
-<div class="icontext w-100">
-	<img src="/ams_g202/images/avatars/avatar_3.jpg" class="img-xs icon rounded-circle">
-	<div class="text">
-		<span class="date text-muted float-right">08/12/2020</span>  
-		<h6 class="mb-1">Lucinda Alves</h6>
-		<ul class="rating-stars">
-			<li style="width:100%" class="stars-active">
-				<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-			</li>
-			<li>
-				<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-			</li>
-		</ul>
-		<span class="label-rating text-warning">5</span>
-	</div>
-</div>
-<div class="mt-3">
-	<h6>Não tem sementes, perfeito para as minhas crianças!!</h6>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>	
-</div>
-</article>
-
-<article class="box mb-3">
-	<div class="icontext w-100">
-		<img src="/ams_g202/images/avatars/avatar_1.jpg" class="img-xs icon rounded-circle">
-		<div class="text">
-			<span class="date text-muted float-right">02/12/2020</span>  
-			<h6 class="mb-1">Rui Marques</h6>
-			<ul class="rating-stars">
-				<li style="width:80%" class="stars-active">
-					<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-				</li>
-				<li>
-					<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-				</li>
-			</ul>
-			<span class="label-rating text-warning">4</span>
-		</div>
-	</div>
-</article>
-
-<article class="box mb-3">
-<div class="icontext w-100">
-	<img src="/ams_g202/images/avatars/avatar.jpg" class="img-xs icon rounded-circle">
-	<div class="text">
-		<span class="date text-muted float-right">24/11/2020</span>  
-		<h6 class="mb-1">Paula Ferreira</h6>
-		<ul class="rating-stars">
-			<li style="width:100%" class="stars-active">
-				<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-			</li>
-			<li>
-				<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-			</li>
-		</ul>
-		<span class="label-rating text-warning">5</span>
-	</div>
-</div>
-<div class="mt-3">
-	<h6>O que é nacional é bom &#x1F61C;</h6>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
-</div>
-</article>
-
-<article class="box mb-3">
-<div class="icontext w-100">
-	<img src="/ams_g202/images/avatars/avatar_4.jpg" class="img-xs icon rounded-circle">
-	<div class="text">
-		<span class="date text-muted float-right">03/11/2020</span>  
-		<h6 class="mb-1">Rodrigo Costa</h6>
-		<ul class="rating-stars">
-			<li style="width:100%" class="stars-active">
-				<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-			</li>
-			<li>
-				<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-			</li>
-		</ul>
-		<span class="label-rating text-warning">5</span>
-	</div>
-</div>
-<div class="mt-3">
-	<h6>Laranjas bem saborosas &#x1F44C;</h6>	
-</div>
-</article>
-
-<article class="box mb-3">
-	<div class="icontext w-100">
-		<img src="/ams_g202/images/avatars/avatar_2.jpg" class="img-xs icon rounded-circle">
-		<div class="text">
-			<span class="date text-muted float-right">29/10/2020</span>  
-			<h6 class="mb-1">Paula Estevão</h6>
-			<ul class="rating-stars">
-				<li style="width:80%" class="stars-active">
-					<img src="/ams_g202/images/icons/stars-active.svg" alt="">
-				</li>
-				<li>
-					<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
-				</li>
-			</ul>
-			<span class="label-rating text-warning">4</span>
-		</div>
-	</div>
-</article>
-
-</div>
-</div>
+<!-- ============================ PRODUCT FEEDBACK END .// ================================= -->
 
 </div> <!-- container .//  -->
 </section>
@@ -361,11 +151,166 @@
 					for (var key in products){
 						// Search through all the products in the list and check which product has that ID
 						if (products.hasOwnProperty(key) && products[key].id == pair[1]){
-							console.log("Product found! Name: " + products[key].name);
+							
 							// Hide product not found message if product is found
 							$('#not-found').hide();
 
-							// ########## TODO: Display product details and reviews dynamically ##########
+							var availability = "available";
+							if (products[key].quantity_left < 1){
+								availability = "unavailable";
+							}
+
+							var ratings = 0;								// Sum of all ratings
+							var reviews = 0; 								// Total number of reviews
+							for (var number in products[key].feedback){
+								if (products[key].feedback.hasOwnProperty(number)){
+									ratings += parseInt(products[key].feedback[number].rating); // Append each individual rating
+									reviews++;
+								}
+							}
+							var rating = 0; 								// Average rating
+							if (reviews != 0){
+								rating = (ratings/reviews).toFixed(1);		
+							}
+							var stars = (rating*100/5).toFixed(2);			// Width of rating stars icons of in percentage
+
+							$("#product-detail").append(`
+								<div class="card sc-product-item">
+									<div class="row no-gutters align-items-center">
+										<aside class="col-md-6">
+											<article class="gallery-wrap"> 
+												<div class="img-big-wrap">
+													<a href="#"><img src="`+ products[key].image +`" class="img-fluid h-auto" alt="" data-name="product_image"></a>
+												</div>
+												<div class="thumbs-wrap">
+													<a href="#" class="item-thumb"><img src="`+ products[key].image +`" alt=""></a>
+												</div>
+											</article>
+										</aside>
+										<main class="col-md-6 border-left">
+											<article class="content-body">
+												<h2 class="title" data-name="product_name">`+ products[key].name +`</h2>
+
+												<ul class="list-check pt-1 d-none `+ availability +`">
+													<li class="text-success">Disponível para encomenda</li>
+												</ul>
+												<ul class="list-dots pt-1 d-none `+ availability +`">
+													<li class="text-muted">Indisponível de momento</li>
+												</ul>
+
+												<div class="rating-wrap my-3">
+													<ul class="rating-stars">
+														<li style="width:`+ stars +`%" class="stars-active">
+															<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+														</li>
+														<li>
+															<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+														</li>
+													</ul>
+													<small class="label-rating text-muted">`+ reviews +` avaliações</small>
+													<small class="label-rating text-primary"><i class="fa fa-clipboard-check"></i> `+ products[key].orders +` encomendas</small>
+												</div>
+
+												<div class="mb-3">
+													<var class="price h4">`+ products[key].price +`€</var><span class="text-muted"> /kg</span>
+												</div>
+
+												<p class="text-justify">`+ products[key].description +`</p>
+
+												<dl class="row">
+													<dt class="col">Produtor:</dt>
+													<dd class="col-sm-9" data-name="product_desc">`+ products[key].producer +`</dd>
+												</dl>
+												<dl class="row">
+													<dt class="col">Origem:</dt>
+													<dd class="col-sm-9">`+ products[key].origin +`</dd>
+												</dl>
+												<dl class="row">
+													<dt class="col">Variedade:</dt>
+													<dd class="col-sm-9">`+ products[key].variety +`</dd>
+												</dl>
+												<dl class="row">
+													<dt class="col">Época:</dt>
+													<dd class="col-sm-9">`+ products[key].season +`</dd>
+												</dl>
+
+												<hr>
+												<form id="product" action="checkout">
+													<div class="row justify-content-between align-items-end">
+														<div class="col-md flex-grow-0">
+															<label>Quantidade (kg):</label>
+															<div class="input-group input-spinner mb-3 mb-lg-1">
+																<div class="input-group-prepend">
+																	<button class="btn btn-light" type="button" id="button-minus">&#8722;</button>
+																</div>
+																<div class="input-group-append input-group-prepend">
+																	<input type="text" name="product_quantity" maxlength="1" pattern="[1-9]" class="btn btn-light font-weight-bolder" value="1" title="Apenas quantidades inteiras de 1 a 9" autocomplete="off" required>
+																</div>
+																<div class="input-group-append">
+																	<button class="btn btn-light" type="button" id="button-plus">+</button>
+																</div>
+															</div>
+														</div>
+														<div class="col-12 col-lg">
+															<button type="submit" class="btn btn-primary mb-1 sc-add-to-cart">Comprar agora</button>
+															<button type="button" id="add-cart" class="btn btn-outline-primary ml-xl-2 mb-1 sc-add-to-cart">Adicionar ao carrinho <i class="fas fa-shopping-cart"></i></button>
+															<button type="button" class="btn btn-outline-danger ml-xl-2 mb-1 sc-remove-from-cart" style="display: none;">Remover do carrinho <i class="fas fa-shopping-cart"></i></button>
+														</div>
+													</div>
+												</form>
+												<input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
+												<input name="product_id" value="`+ products[key].id +`" type="hidden">
+											</article>
+										</main>
+									</div>
+								</div>
+							`);
+
+							$("#product-feedback").append(`
+								<header class="section-heading">
+									<h3>Feedback</h3>  
+									<div class="rating-wrap">
+										<ul class="rating-stars stars-lg">
+											<li style="width:`+ stars +`%" class="stars-active">
+												<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+											</li>
+											<li>
+												<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+											</li>
+										</ul>
+										<strong class="label-rating text-lg">`+ rating +` <span class="text-muted">| `+ reviews +` avaliações</span></strong>
+									</div>
+								</header>
+							`);
+
+							for (var count in products[key].feedback){
+								if (products[key].feedback.hasOwnProperty(count)){
+									$("#product-feedback").append(`
+										<article class="box mb-3">
+											<div class="icontext w-100">
+												<img src="`+ products[key].feedback[count].avatar +`" class="img-xs icon rounded-circle">
+												<div class="text">
+													<span class="date text-muted float-right">`+ products[key].feedback[count].date +`</span>  
+													<h6 class="mb-1">`+ products[key].feedback[count].name +`</h6>
+													<ul class="rating-stars">
+														<li style="width:`+ (products[key].feedback[count].rating*100/5).toFixed(0) +`%" class="stars-active">
+															<img src="/ams_g202/images/icons/stars-active.svg" alt="">
+														</li>
+														<li>
+															<img src="/ams_g202/images/icons/starts-disable.svg" alt="">
+														</li>
+													</ul>
+													<span class="label-rating text-warning">`+ products[key].feedback[count].rating +`</span>
+												</div>
+											</div>
+											<div class="mt-3">
+												<h6>`+ products[key].feedback[count].title +`</h6>
+												<p>`+ products[key].feedback[count].comment +`</p>	
+											</div>
+										</article>
+									`);
+								}
+							}
 						}
 					}
 				}
