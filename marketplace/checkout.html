@@ -147,12 +147,12 @@
 				<input type="text" placeholder="Primeiro nome" name="firstname" class="form-control" required>
 			</div>
 			<div class="form-group col-sm-6">
-				<label>Último nome</label>
-				<input type="text" placeholder="Último nome" name="surname" class="form-control" required>
+				<label>Apelido</label>
+				<input type="text" placeholder="Apelido" name="surname" class="form-control" required>
 			</div>
 			<div class="form-group col-sm-6">
 				<label>Telemóvel</label>
-				<input type="text" maxlength="9" placeholder="Número de telemóvel" name="phone_number" class="form-control" required>
+				<input type="text" maxlength="9" pattern="^[0-9]*$" title="Apenas dígitos" placeholder="Número de telemóvel" name="phone" class="form-control" required>
 			</div>
 			<div class="form-group col-sm-6">
 				<label>Email</label>
@@ -227,11 +227,11 @@
 		</div>
 		<div class="form-group col-sm-2">
 			<label>Nº</label>
-			<input type="text" placeholder="Número" class="form-control">
+			<input type="text" placeholder="Número" class="form-control" required>
 		</div>
 		<div class="form-group col-sm-3">
 			<label>Piso</label>
-			<input type="text" placeholder="Piso" class="form-control">
+			<input type="text" placeholder="Piso" class="form-control" required>
 		</div>
 	</div> <!-- row.// -->
 </div> <!-- card-body.// -->
@@ -255,7 +255,7 @@
 		<div id="paypal" class="collapse show" data-parent="#accordion_pay">
 		<div class="card-body">
 			<p class="alert alert-info">Este método de pagamento necessita que tenha uma conta Paypal associada a um cartão ou conta bancária válida.</p>
-			<p class="text-muted">Ligue-se à sua conta PayPal e utilize-a para pagar esta encomenda. Será redirecionado para o site do PayPal para validar e finalizar a compra.</p>
+			<p class="text-muted">Assim que finalizar esta encomenda, será redirecionado para o site do PayPal onde poderá iniciar sessão na sua conta e utilizá-la para pagar esta compra.</p>
 			<p class="text-center">
 				<a href="https://www.paypal.com/" target="_blank"><img src="/ams_g202/images/misc/btn-paypal.png" height="32"></a>
 			</p>
@@ -275,11 +275,8 @@
 		<div id="mbway" class="collapse" data-parent="#accordion_pay">
 			<div class="card-body">
 				<p class="alert alert-info">Este método de pagamento necessita que tenha instalado a aplicação MB Way associada a um cartão bancário válido.</p>
-				<p class="text-muted">Digite o seu número de telemóvel e receberá uma notificação no seu telemóvel com os detalhes da sua encomenda. Apenas precisa de confirmar e validar a compra através de um PIN ou impressão digital.</p>
-				<form class="form-inline" id="notification">
-					<input type="text" maxlength="9" class="form-control mr-3" style="max-width: 250px" placeholder="Número de telemóvel" name="phone_number" required>
-					<button form="notification" class="btn btn btn-success">Enviar notificação</button>
-				</form>
+				<p class="text-muted">Digite o seu número e irá receber uma notificação no seu telemóvel imediatamente após finalizar esta encomenda. Precisará apenas de validar o pagamento desta compra através de um PIN ou impressão digital.</p>
+				<input type="text" maxlength="9" pattern="^[0-9]*$" title="Apenas dígitos" class="form-control mr-3" style="max-width: 250px" placeholder="Número de telemóvel" name="phone_number" required>
 			</div> <!-- card body .// -->
 		</div> <!-- collapse .// -->
 	</div> <!-- card.// -->
@@ -295,7 +292,7 @@
 		</header>
 		<div id="bank" class="collapse" data-parent="#accordion_pay">
 			<div class="card-body">
-				<p class="text-muted">Dirija-se a uma caixa multibanco e introduza os seguintes dados na operação "pagamento de serviços e compras":</p>
+				<p class="text-muted">Após finalizar a compra, dirija-se a uma caixa multibanco e introduza os seguintes dados na operação "Pagamento de Serviços/Compras":</p>
 				<dl class="dlist-align">
 					<dt class="font-weight-bold">Entidade:</dt>
 					<dd>12345</dd>
@@ -324,12 +321,11 @@
 		<div id="card" class="collapse" data-parent="#accordion_pay">
 			<div class="card-body">
 				<p class="alert alert-info">Esta compra aparecerá no extrato do seu cartão de crédito como "PAGAMENTO *ECOMARKET".</p>
-				<form class="form-inline" id="validation">
-					<input type="text" pattern="^[0-9]*$" title="Apenas dígitos" class="form-control mr-2" placeholder="XXXX-XXXX-XXXX-XXXX" name="card_number" required>
-					<input type="text" class="form-control mr-2" style="width: 100px" placeholder="MM/AA" name="card_expiration_date" required>
-					<input type="text" pattern="^[0-9]*$" title="Apenas dígitos" minlength="3" maxlength="3" class="form-control mr-2" style="width: 100px" placeholder="CVC" name="card_cvc" required>
-					<button form="validation" class="btn btn btn-success">Validar cartão</button>
-				</form>
+				<div class="form-inline">
+					<input type="text" minlength="16" maxlength="19" pattern="^[0-9]*$" title="Apenas dígitos" class="form-control mr-2" placeholder="XXXX XXXX XXXX XXXX" name="card_number" required>
+					<input type="text" minlength="5" maxlength="5" class="form-control mr-2" style="max-width: 100px" placeholder="MM/AA" name="card_expiration_date" required>
+					<input type="password" pattern="^[0-9]*$" title="Apenas dígitos" minlength="3" maxlength="3" class="form-control mr-2" style="max-width: 100px" placeholder="CVC" name="card_cvc" required>
+				</div>
 			</div> <!-- card body .// -->
 		</div> <!-- collapse .// -->
 	</div> <!-- card.// -->
