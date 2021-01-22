@@ -55,6 +55,7 @@
 
 	<!-- ========================= SECTION CONTENT ========================= -->
 	<section class="section-content padding-y bg" style="min-height:84vh">
+		<div class="container">
 
 	<!-- ============================ COMPONENT LOGIN   ================================= -->
 		<div class="card mx-auto" style="max-width: 380px; margin-top:30px;">
@@ -109,7 +110,7 @@
 		</div>
 	<!-- ============================ COMPONENT LOGIN  END.// ================================= -->
 
-
+		</div>
 	</section>
 	<!-- ========================= SECTION CONTENT END// ========================= -->
 
@@ -152,20 +153,51 @@
 						customerAccount = {
 							email: 'cliente@ua.pt',
 							password: btoa('cliente'),		// Base64 encode
-							type: 'customer'
+							type: 'cliente',
+							avatar: '/ams_g202/images/avatars/avatar.jpg',
+							name: 'Joaquim Raro, Lda',
+							firstname: 'Calisto',
+							surname: 'Comum',
+							nif: '',
+							phone: '969696969',
+							district: 'Aveiro',
+							county: 'Aveiro',
+							parish: 'Glória',
+							zip: '3810-104',
+							address: 'Rua Dr. Calisto Raro',
+							number: '20',
+							floor: '3º direito',
+							in_progress_orders: '1',
+							completed_orders: '3',
+							refunded_orders: '0'
 						};
 						// Create demo producer account
 						producerAccount = {
 							email: 'produtor@ua.pt',
 							password: btoa('produtor'),		// Base64 encode
-							type: 'producer'
+							type: 'produtor',
+							avatar: '/ams_g202/images/avatars/avatar.jpg',
+							name: 'Joaquim Raro, Lda',
+							firstname: '',
+							surname: '',
+							nif: '123456789',
+							phone: '238238238',
+							district: 'Aveiro',
+							county: 'Aveiro',
+							parish: 'Vera Cruz',
+							zip: '3810-132',
+							address: 'Avenida Dr. Joaquim Comum',
+							number: '120',
+							floor: '3º esquerdo',
+							in_progress_orders: '2',
+							completed_orders: '1',
+							refunded_orders: '0'
 						};
 						accounts.push(customerAccount);
 						accounts.push(producerAccount);
 						
 						// Store data (both demo accounts) on storage
 						localStorage.setItem('ecomarket_accounts', JSON.stringify(accounts));
-
 					}
 
 					// Get all saved accounts on storage
@@ -179,11 +211,15 @@
 					accounts.forEach(function(object){
 						// Compares both email and password entered by the user with the stored ones
 						if(object.email == email && atob(object.password) == password){		// Base64 decode
+
+							// Store session data on the storage item and remember that this account is logged in
+							localStorage.setItem('ecomarket_session', JSON.stringify(object));
+
 							// After a valid login, choose where to redirect the user, according to their account type
-							if (object.type == 'producer'){
+							if (object.type == 'produtor'){
 								// A producer account goes to sell page
 								$('#login').attr('action', 'sell');
-							}else{
+							} else{
 								// A customer account goes to buy page
 								$('#login').attr('action', 'buy');
 							}
@@ -192,7 +228,7 @@
 
 				} else{
 					// Browser does not support web storage
-					window.location.replace("/ams_g202/marketplace/no-js");
+					window.location.replace("/ams_g202/marketplace/error");
 				}
 
 			});

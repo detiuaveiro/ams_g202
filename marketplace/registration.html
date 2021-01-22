@@ -56,6 +56,7 @@
 
 <!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y bg" style="min-height:84vh">
+	<div class="container">
 
 <!-- ============================ COMPONENT REGISTER   ================================= -->
 	<div class="card mx-auto" style="max-width:570px; margin-top:30px;">
@@ -63,204 +64,190 @@
 		<header class="mb-4">
 			<h4 class="card-title">Criar conta</h4>
 		</header>
+
 		<form class="block-register" action="login" id="registration">
-		  <!-- Common field -->
-		  <div class="form-group form-row">
-			<label class="col-md-3 col-form-label">Sou um</label>
-			<div class="col-sm-9 pt-1">
-				<label class="custom-control custom-radio custom-control-inline">
-				  <input class="custom-control-input" type="radio" name="type" value="customer" checked>
-				  <span class="custom-control-label">Cliente</span>
-				</label>
-				<label class="custom-control custom-radio custom-control-inline">
-				  <input class="custom-control-input" type="radio" name="type" value="producer">
-				  <span class="custom-control-label">Produtor</span>
-				</label>
-			</div>
-		  </div>
 
-		  <!-- Producer field -->
-		  <div class="form-group form-row certification" style="display: none;">
-			<div class="col-md-9 offset-md-3">
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="certification">
-				  <div class="custom-control-label" for="certification">Possuo o <a href="https://portugalsoueu.pt/pt/o-selo" target="_blank"><u>selo "Portugal Sou Eu"</u></a></div>
-				</label>
-			 </div>
-		  </div>
+			<!-- Common field -->
+			<div class="form-group form-row">
+				<label class="col-md-3 col-form-label">Sou um</label>
+				<div class="col-sm-9 pt-1">
+					<label class="custom-control custom-radio custom-control-inline">
+						<input class="custom-control-input" type="radio" name="type" value="cliente" checked>
+						<span class="custom-control-label">Cliente</span>
+					</label>
+					<label class="custom-control custom-radio custom-control-inline">
+						<input class="custom-control-input" type="radio" name="type" value="produtor">
+						<span class="custom-control-label">Produtor</span>
+					</label>
+				</div>
+			</div>
 
-		  <p class="text-muted text-justify pt-2 pb-4" id="help" style="display: none;">
-			Para se juntar ao EcoMarket, necessitamos que possua o selo "Portugal Sou Eu" (antigo "Compro o que é nosso") para que consigamos confirmar que é realmente um produtor nacional, de forma a manter o propósito da nossa plataforma.
-			<br><br>
-			Se já o possui, assinale a caixa de verificação em cima. Caso contrário, pode pedi-lo em <a href="https://portugalsoueu.pt/pt/adesao" target="_blank"><u>https://portugalsoueu.pt/pt/adesao</u></a>.
-		  </p>
+			<!-- Producer field -->
+			<div class="form-group form-row certification" style="display: none;">
+				<div class="col-md-9 offset-md-3">
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="certification">
+						<div class="custom-control-label" for="certification">Possuo o <a href="https://portugalsoueu.pt/pt/o-selo" target="_blank"><u>selo "Portugal Sou Eu"</u></a></div>
+					</label>
+				</div>
+			</div>
 
-		  <!-- Customer field -->
-		  <div class="form-group form-row customer">
-			<label class="col-md-3 col-form-label">Nome</label>
-			<div class="col">
-			  <input type="text" class="form-control" placeholder="Primeiro nome">
-			</div>
-			<div class="col">
-			  <input type="text" class="form-control" placeholder="Apelido">
-			</div>
-		  </div>
+			<p class="text-muted text-justify pt-2 pb-4" id="help" style="display: none;">
+				Para se juntar ao EcoMarket, necessitamos que possua o selo "Portugal Sou Eu" (antigo "Compro o que é nosso") para que consigamos confirmar que é realmente um produtor nacional, de forma a manter o propósito da nossa plataforma.
+				<br><br>
+				Se já o possui, assinale a caixa de verificação em cima. Caso contrário, pode pedi-lo em <a href="https://portugalsoueu.pt/pt/adesao" target="_blank"><u>https://portugalsoueu.pt/pt/adesao</u></a>.
+			</p>
 
-		  <!-- Producer field -->
-		  <div class="form-group form-row producer" style="display: none;">
-			<label class="col-md-3 col-form-label">Nome fiscal</label>
-			<div class="col">
-			  	<input type="text" class="form-control" placeholder="Nome do estabelecimento/coletado">
+			<!-- Customer field -->
+			<div class="form-group form-row customer">
+				<label class="col-md-3 col-form-label">Nome</label>
+				<div class="col">
+					<input type="text" class="form-control customer" placeholder="Primeiro nome" name="firstname" required>
+				</div>
+				<div class="col">
+					<input type="text" class="form-control customer" placeholder="Apelido" name="surname" required>
+				</div>
 			</div>
-		  </div>
 
-		  <!-- Common field -->
-		  <div class="form-group form-row common">
-			<label class="col-md-3 col-form-label">Email</label>
-			<div class="col">
-			  	<input name="email" type="email" class="form-control" placeholder="Email" required>
+			<!-- Producer field -->
+			<div class="form-group form-row producer" style="display: none;">
+				<label class="col-md-3 col-form-label">Nome fiscal</label>
+				<div class="col">
+					<input type="text" class="form-control producer" name="name" placeholder="Nome do estabelecimento/coletado">
+				</div>
 			</div>
-		  </div>
-		
-		  <!-- Common field -->
-		  <div class="form-group form-row common">
-			<label class="col-md-3 col-form-label">Telefone</label>
-			<div class="col">
-				<input name="phone" class="form-control" placeholder="Número de telefone" type="text">
-			</div>
-		  </div>
 
-		  <!-- Producer field -->
-		  <div class="form-group form-row producer" style="display: none;">
-			<label class="col-md-3 col-form-label">NIF</label>
-			<div class="col">
-				<input name="nif" class="form-control" placeholder="Número de identificação fiscal" type="text">
+			<!-- Common field -->
+			<div class="form-group form-row common">
+				<label class="col-md-3 col-form-label">Email</label>
+				<div class="col">
+					<input name="email" type="email" class="form-control" placeholder="Email" required>
+				</div>
 			</div>
-		  </div>
-		
-		  <!-- Customer field -->
-		  <div class="form-group form-row customer">
-			<label class="col-md-3 col-form-label">Localidade</label>
-			<div class="col">
-			  <input type="text" class="form-control" placeholder="Concelho">
+			
+			<!-- Common field -->
+			<div class="form-group form-row common">
+				<label class="col-md-3 col-form-label">Telefone</label>
+				<div class="col">
+					<input name="phone" class="form-control" placeholder="Número de telefone" type="text" required>
+				</div>
 			</div>
-			<div class="col">
-			  <select class="custom-select form-control">
-				<option value="" selected disabled>Distrito</option>
-				<option value="Viana do Castelo">Viana do Castelo</option>
-				<option value="Braga">Braga</option>
-				<option value="Vila Real">Vila Real</option>
-				<option value="Bragança">Bragança</option>
-				<option value="Porto">Porto</option>
-				<option value="Aveiro">Aveiro</option>
-				<option value="Viseu">Viseu</option>
-				<option value="Guarda">Guarda</option>
-				<option value="Coimbra">Coimbra</option>
-				<option value="Castelo Branco">Castelo Branco</option>
-				<option value="Leiria">Leiria</option>
-				<option value="Lisboa">Lisboa</option>
-				<option value="Santarém">Santarém</option>
-				<option value="Portalegre">Portalegre</option>
-				<option value="Setúbal">Setúbal</option>
-				<option value="Évora">Évora</option>
-				<option value="Beja">Beja</option>
-				<option value="Faro">Faro</option>
-			  </select>
-			</div>
-		  </div>
 
-		  <!-- Producer field -->
-		  <div class="form-group form-row producer" style="display: none;">
-			<label class="col-md-3 col-form-label">Morada fiscal</label>
-			<div class="col">
-			  <input type="text" class="form-control" placeholder="Morada do estabelecimento/coletado">
+			<!-- Producer field -->
+			<div class="form-group form-row producer" style="display: none;">
+				<label class="col-md-3 col-form-label">NIF</label>
+				<div class="col">
+					<input name="nif" class="form-control producer" placeholder="Número de identificação fiscal" type="text">
+				</div>
 			</div>
-		  </div>
-		  <div class="form-group form-row producer" style="display: none;">
-			<label class="col-md-3 col-form-label"></label>
-			<div class="col">
-			  <input type="text" class="form-control" placeholder="Concelho">
-			</div>
-			<div class="col">
-			  <select class="custom-select form-control">
-				<option value="" selected disabled>Distrito</option>
-				<option value="Viana do Castelo">Viana do Castelo</option>
-				<option value="Braga">Braga</option>
-				<option value="Vila Real">Vila Real</option>
-				<option value="Bragança">Bragança</option>
-				<option value="Porto">Porto</option>
-				<option value="Aveiro">Aveiro</option>
-				<option value="Viseu">Viseu</option>
-				<option value="Guarda">Guarda</option>
-				<option value="Coimbra">Coimbra</option>
-				<option value="Castelo Branco">Castelo Branco</option>
-				<option value="Leiria">Leiria</option>
-				<option value="Lisboa">Lisboa</option>
-				<option value="Santarém">Santarém</option>
-				<option value="Portalegre">Portalegre</option>
-				<option value="Setúbal">Setúbal</option>
-				<option value="Évora">Évora</option>
-				<option value="Beja">Beja</option>
-				<option value="Faro">Faro</option>
-			  </select>
-			</div>
-		  </div>
-		  <div class="form-group form-row producer" style="display: none;">
-			<label class="col-md-3 col-form-label"></label>
-			<div class="col-4">
-			  <input type="text" name="code" class="form-control" placeholder="Código postal">
-			</div>
-			<div class="col">
-			  <input type="text" class="form-control" placeholder="Freguesia">
-			</div>
-		  </div>
-		
-		  <!-- Common field -->
-		  <div class="form-group form-row common">
-			<label class="col-md-3 col-form-label">Palavra-passe</label>
-			<div class="col-md-6">
-			  <input type="password" name="password" class="form-control mb-2" placeholder="Palavra-passe" required>
-			  <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar palavra-passe" required>
-			  <div class="invalid-feedback">
-				As palavras-passes não são iguais.
-			  </div>
-			</div>
-		  </div>
 
-		  <!-- Common field -->
-		  <div class="form-group form-row common">
-			<label class="col-md-3 col-form-label">Não sou um robô</label>
-			<div class="col-md-6">
-			  <img class="img-fluid rounded mb-1" src="/ams_g202/images/misc/captcha.jpg" alt="">
-			  <input type="text" pattern="grupo 202 AMS|grupo202AMS|grupo 202 ams|grupo202ams" class="form-control mb-3" placeholder="CAPTCHA" title="Introduza o CAPTCHA correto" required>
+			<!-- Common field -->
+			<div class="form-group form-row common">
+				<label class="col-md-3 col-form-label">Localidade</label>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Concelho" name="county" required>
+				</div>
+				<div class="col">
+					<select class="custom-select form-control" name="district" required>
+						<option value="" selected disabled>Distrito</option>
+						<option value="Viana do Castelo">Viana do Castelo</option>
+						<option value="Braga">Braga</option>
+						<option value="Vila Real">Vila Real</option>
+						<option value="Bragança">Bragança</option>
+						<option value="Porto">Porto</option>
+						<option value="Aveiro">Aveiro</option>
+						<option value="Viseu">Viseu</option>
+						<option value="Guarda">Guarda</option>
+						<option value="Coimbra">Coimbra</option>
+						<option value="Castelo Branco">Castelo Branco</option>
+						<option value="Leiria">Leiria</option>
+						<option value="Lisboa">Lisboa</option>
+						<option value="Santarém">Santarém</option>
+						<option value="Portalegre">Portalegre</option>
+						<option value="Setúbal">Setúbal</option>
+						<option value="Évora">Évora</option>
+						<option value="Beja">Beja</option>
+						<option value="Faro">Faro</option>
+					</select>
+				</div>
 			</div>
-		  </div>
 
-		  <!-- Producer field -->
-		  <div class="form-group form-row producer" style="display: none;">
-			<div class="col-md-9 offset-md-3">
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="conditions">
-				  <div class="custom-control-label" for="conditions">Declaro que cumpro os requisitos estabelecidos nas <a href="#"><u>condições de adesão</u></a></div>
-				</label>
-			 </div>
-		  </div>
-		
-		  <!-- Common field -->
-		  <div class="form-group form-row common">
-			<div class="col-md-9 offset-md-3">
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="terms" required>
-				  <div class="custom-control-label" for="terms">Concordo com os <a href="#"><u>termos e condições de uso</u></a></div>
-				</label>
-			 </div>
-		  </div>
+			<!-- Producer field -->
+			<div class="form-group form-row producer" style="display: none;">
+				<label class="col-md-3 col-form-label"></label>
+				<div class="col-4">
+					<input type="text" name="zip" class="form-control producer" placeholder="Código postal">
+				</div>
+				<div class="col">
+					<input type="text" name="parish" class="form-control producer" placeholder="Freguesia">
+				</div>
+			</div>
 
-		  <div class="form-row mb-2">
-			<div class="col-12">
-			  <button type="submit" class="btn btn-primary btn-block">Criar conta</button>
-			 </div>
-		  </div>
+			<!-- Producer field -->
+			<div class="form-group form-row producer" style="display: none;">
+				<label class="col-md-3 col-form-label">Morada fiscal</label>
+				<div class="col">
+					<input type="text" class="form-control producer" placeholder="Morada do estabelecimento/coletado" name="address">
+				</div>
+			</div>
+
+			<!-- Producer field -->
+			<div class="form-group form-row producer" style="display: none;">
+				<label class="col-md-3 col-form-label"></label>
+				<div class="col-4">
+					<input type="text" name="number" class="form-control producer" placeholder="Nº">
+				</div>
+				<div class="col">
+					<input type="text" name="floor" class="form-control producer" placeholder="Piso">
+				</div>
+			</div>
+			
+			<!-- Common field -->
+			<div class="form-group form-row common">
+				<label class="col-md-3 col-form-label">Palavra-passe</label>
+				<div class="col-md-6">
+					<input type="password" name="password" class="form-control mb-2" placeholder="Palavra-passe" required>
+					<input type="password" name="confirm_password" class="form-control" placeholder="Confirmar palavra-passe" required>
+					<div class="invalid-feedback">
+						As palavras-passes não são iguais.
+					</div>
+				</div>
+			</div>
+
+			<!-- Common field -->
+			<div class="form-group form-row common">
+				<label class="col-md-3 col-form-label">Não sou um robô</label>
+				<div class="col-md-6">
+					<img class="img-fluid rounded mb-1" src="/ams_g202/images/misc/captcha.jpg" alt="">
+					<input type="text" pattern="grupo 202 AMS|grupo202AMS|grupo 202 ams|grupo202ams" class="form-control mb-3" placeholder="CAPTCHA" title="Introduza o CAPTCHA correto" required>
+				</div>
+			</div>
+
+			<!-- Producer field -->
+			<div class="form-group form-row producer" style="display: none;">
+				<div class="col-md-9 offset-md-3">
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input producer" id="conditions">
+						<div class="custom-control-label" for="conditions">Declaro que cumpro os requisitos estabelecidos nas <a href="#"><u>condições de adesão</u></a></div>
+					</label>
+				</div>
+			</div>
+			
+			<!-- Common field -->
+			<div class="form-group form-row common">
+				<div class="col-md-9 offset-md-3">
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="terms" required>
+						<div class="custom-control-label" for="terms">Concordo com os <a href="#"><u>termos e condições de uso</u></a></div>
+					</label>
+				</div>
+			</div>
+
+			<div class="form-row mb-2">
+				<div class="col-12">
+					<button type="submit" id="submit" class="btn btn-primary btn-block">Criar conta</button>
+				</div>
+			</div>
 		
 		</form>
 
@@ -272,7 +259,7 @@
 	
 <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
 
-
+	</div>
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
@@ -292,35 +279,38 @@
 
 	<script>
 		$(document).ready(function(){
-			$(".block-register input[name=type]").change(function(){
-				let type = $(".block-register input[name=type]:checked").val();
-				if (type == "producer"){
-					$(".producer, .common, .customer").hide();
+			$("#registration input[name=type]").change(function(){
+				let type = $("#registration input[name=type]:checked").val();
+				if (type == "produtor"){
+					$("div.producer, div.common, div.customer").hide();
 					$(".certification, #help").show();
-					$(".block-register #certification").prop('required', true);
+					$("#registration #certification, input.producer").prop("required", true);
+					$("input.customer").prop("required", false).val("");
 				} else{
-					$(".certification, .producer, #help").hide();
-					$(".customer, .common").show();
-					$(".block-register #certification").prop('checked', false);
-					$(".block-register #certification").prop('required', false);
+					$("div.certification, div.producer, #help").hide();
+					$("div.customer, div.common").show();
+					$("#registration #certification").prop("checked", false);
+					$("#registration #certification, input.producer").prop("required", false).val("");
+					$("input.customer").prop("required", true);
 				}
 			});
-			$(".block-register #certification").change(function(){
+			$("#registration #certification").change(function(){
 				if (this.checked){
 					$("#help").hide();
-					$(".producer, .common").show();
+					$("div.producer, div.common").show();
 				} else{
-					$(".producer, .common").hide();
+					$("div.producer, div.common").hide();
 					$("#help").show();
 				}
 			});
 
-			$("#registration input[name=confirm_password]").keyup(function(){
-				if ($("#registration input[name=password]").val() != $(this).val()){
-					$(this).addClass("is-invalid");
+			$("#registration input[name=confirm_password], #registration input[name=password]").keyup(function(){
+				if ($("#registration input[name=password]").val() != $("#registration input[name=confirm_password]").val()){
+					$("#registration input[name=confirm_password]").addClass("is-invalid");
+					$("#registration #submit").prop("disabled", true);
 				} else{
-					$(this).removeClass("is-invalid");
-					$(this).addClass("is-valid");
+					$("#registration input[name=confirm_password]").removeClass("is-invalid").addClass("is-valid");
+					$("#registration #submit").prop("disabled", false);
 				}
 			});
 
@@ -337,39 +327,103 @@
 						customerAccount = {
 							email: 'cliente@ua.pt',
 							password: btoa('cliente'),		// Base64 encode
-							type: 'customer'
+							type: 'cliente',
+							avatar: '/ams_g202/images/avatars/avatar.jpg',
+							name: 'Joaquim Raro, Lda',
+							firstname: 'Calisto',
+							surname: 'Comum',
+							nif: '',
+							phone: '969696969',
+							district: 'Aveiro',
+							county: 'Aveiro',
+							parish: 'Glória',
+							zip: '3810-104',
+							address: 'Rua Dr. Calisto Raro',
+							number: '20',
+							floor: '3º direito',
+							in_progress_orders: '1',
+							completed_orders: '3',
+							refunded_orders: '0'
 						};
 						// Create demo producer account
 						producerAccount = {
 							email: 'produtor@ua.pt',
 							password: btoa('produtor'),		// Base64 encode
-							type: 'producer'
+							type: 'produtor',
+							avatar: '/ams_g202/images/avatars/avatar.jpg',
+							name: 'Joaquim Raro, Lda',
+							firstname: '',
+							surname: '',
+							nif: '123456789',
+							phone: '238238238',
+							district: 'Aveiro',
+							county: 'Aveiro',
+							parish: 'Vera Cruz',
+							zip: '3810-132',
+							address: 'Avenida Dr. Joaquim Comum',
+							number: '120',
+							floor: '3º esquerdo',
+							in_progress_orders: '2',
+							completed_orders: '1',
+							refunded_orders: '0'
 						};
 						accounts.push(customerAccount);
 						accounts.push(producerAccount);
 						
 						// Store data (both demo accounts) on storage
 						localStorage.setItem('ecomarket_accounts', JSON.stringify(accounts));
-
 					}
 
 					// Get values from the registration form
-					var type = $("#registration input[name=type]:checked").val();
 					var email = $("#registration input[name=email]").val();
 					var password = $("#registration input[name=password]").val();
-
-					// ########## TODO: Store values from all the inputs ##########
+					var type = $("#registration input[name=type]:checked").val();
+					var name = $("#registration input[name=name]").val();
+					var firstname = $("#registration input[name=firstname]").val();
+					var surname = $("#registration input[name=surname]").val();
+					var nif = $("#registration input[name=nif]").val();
+					var phone = $("#registration input[name=phone]").val();
+					var district = $("#registration input[name=district]").val();
+					var county = $("#registration input[name=county]").val();
+					var parish = $("#registration input[name=parish]").val();
+					var zip = $("#registration input[name=zip]").val();
+					var address = $("#registration input[name=address]").val();
+					var number = $("#registration input[name=number]").val();
+					var floor = $("#registration input[name=floor]").val();
 
 					// Get storage, append the new account created and save it again on storage
 					accounts = JSON.parse(localStorage.getItem("ecomarket_accounts"));
-					accounts.push( {email: email, password: btoa(password), type: type} );		// Base64 encode
+					
+					accounts.push(
+						{
+							email: email,
+							password: btoa(password),		// Base64 encode
+							type: type,
+							avatar: '/ams_g202/images/avatars/avatar.jpg',
+							name: name,
+							firstname: firstname,
+							surname: surname,
+							nif: nif,
+							phone: phone,
+							district: district,
+							county: county,
+							parish: parish,
+							zip: zip,
+							address: address,
+							number: number,
+							floor: floor,
+							in_progress_orders: '0',
+							completed_orders: '0',
+							refunded_orders: '0'
+						}
+					);
+
 					localStorage.setItem('ecomarket_accounts', JSON.stringify(accounts));
 
 				} else{
 					// Browser does not support web storage
-					window.location.replace("/ams_g202/marketplace/no-js");
+					window.location.replace("/ams_g202/marketplace/error");
 				}
-
 				
 			});
 		});
