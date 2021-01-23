@@ -10,7 +10,10 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/ams_g202/favicon-16x16.png">
 	<link rel="icon" type="image/x-icon" href="/ams_g202/favicon.ico">
 
-  	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+	<script src="/ams_g202/js/jquery-2.0.0.min.js"></script>
+	  
+	<script src="/ams_g202/js/login.js"></script>
+	<script src="/ams_g202/js/products.js"></script>
 
   	<script src="/ams_g202/js/bootstrap.bundle.min.js"></script>
 	<link href="/ams_g202/css/bootstrap.css" rel="stylesheet">
@@ -24,35 +27,6 @@
 
   	<link href="/ams_g202/css/ui.css" rel="stylesheet">
   	<script src="/ams_g202/js/script.js"></script>
-
-	<script>
-		$(document).ready(function(){
-			$(".remove1").click(function(){
-				var sure = confirm("Tem a certeza que pretende parar de vender este produto?\nEsta ação é irreversível, terá de colocar novamente o produto à venda.");
-				if (sure){
-					$(".remove_1").remove();
-					var count = $("b.counter").text();
-					$("b.counter").text(--count);
-				}
-			});
-			$(".remove2").click(function(){
-				var sure = confirm("Tem a certeza que pretende parar de vender este produto?\nEsta ação é irreversível, terá de colocar novamente o produto à venda.");
-				if (sure){
-					$(".remove_2").remove();
-					var count = $("b.counter").text();
-					$("b.counter").text(--count);
-				}
-			});
-			$(".remove3").click(function(){
-				var sure = confirm("Tem a certeza que pretende parar de vender este produto?\nEsta ação é irreversível, terá de colocar novamente o produto à venda.");
-				if (sure){
-					$(".remove_3").remove();
-					var count = $("b.counter").text();
-					$("b.counter").text(--count);
-				}
-			});
-		});
-	</script>
 </head>
 <body>
 	<header class="section-header">
@@ -140,73 +114,73 @@
 
 					<form class="my-3 mx-3">
 						<div class="form-group form-row">
-							<label class="col-md-3 col-form-label">Designação</label>
-							<div class="col">
-								<input class="form-control" placeholder="Designação" type="text">
+							<label class="col-md-3 col-form-label">Categoria</label>
+							<div class="col-sm-9 pt-1">
+								<label class="custom-control custom-radio custom-control-inline">
+									<input class="custom-control-input" type="radio" name="category" value="Fruta" checked>
+								  	<span class="custom-control-label">Fruta</span>
+								</label>
+								<label class="custom-control custom-radio custom-control-inline">
+								  	<input class="custom-control-input" type="radio" name="category" value="Legume">
+								  	<span class="custom-control-label">Legume</span>
+								</label>
 							</div>
 						</div>
 
 						<div class="form-group form-row">
-							<label class="col-md-3 col-form-label">Categoria</label>
-							<div class="col-sm-9 pt-1">
-								<label class="custom-control custom-radio custom-control-inline">
-								  <input class="custom-control-input" type="radio" name="type">
-								  <span class="custom-control-label">Fruta</span>
-								</label>
-								<label class="custom-control custom-radio custom-control-inline">
-								  <input class="custom-control-input" type="radio" name="type">
-								  <span class="custom-control-label">Legume</span>
-								</label>
+							<label class="col-md-3 col-form-label">Designação</label>
+							<div class="col">
+								<input class="form-control" placeholder="Designação" type="text" name="name" required>
 							</div>
 						</div>
 
 						<div class="form-group form-row">
 							<label class="col-md-3 col-form-label">Preço</label>
 							<div class="col">
-								<input class="form-control" placeholder="Preço em €" type="number" min="0" step="0.01">
-							</div>
-						</div>
-
-						<div class="form-group form-row">
-							<label class="col-md-3 col-form-label">Descrição</label>
-							<div class="col">
-								<textarea class="form-control" placeholder="Pequena descrição sobre o produto" rows="4"></textarea>
-							</div>
-						</div>
-
-						<div class="form-group form-row">
-							<label class="col-md-3 col-form-label">Variedade</label>
-							<div class="col">
-								<input class="form-control" placeholder="Variedade" type="text">
-							</div>
-						</div>
-
-						<div class="form-group form-row">
-							<label class="col-md-3 col-form-label">Origem</label>
-							<div class="col">
-								<input class="form-control" placeholder="Origem" type="text">
-							</div>
-						</div>
-
-						<div class="form-group form-row">
-							<label class="col-md-3 col-form-label">Época</label>
-							<div class="col">
-								<input class="form-control" placeholder="Época" type="text">
+								<input class="form-control" placeholder="Preço em €" type="number" min="0" max="20" step="0.01" name="price" required>
 							</div>
 						</div>
 
 						<div class="form-group form-row">
 							<label class="col-md-3 col-form-label">Quantidade</label>
 							<div class="col">
-								<input class="form-control" placeholder="Quantidade disponível em kg" min="1" type="number">
+								<input class="form-control" placeholder="Quantidade disponível em kg" min="1" step="1" type="number" name="quantity_left" required>
+							</div>
+						</div>
+
+						<div class="form-group form-row">
+							<label class="col-md-3 col-form-label">Descrição</label>
+							<div class="col">
+								<textarea class="form-control" placeholder="Pequena descrição sobre o produto" rows="4" name="description" required></textarea>
+							</div>
+						</div>
+
+						<div class="form-group form-row">
+							<label class="col-md-3 col-form-label">Origem</label>
+							<div class="col">
+								<input class="form-control" placeholder="Local de origem" type="text" name="origin" required>
+							</div>
+						</div>
+
+						<div class="form-group form-row">
+							<label class="col-md-3 col-form-label">Variedade</label>
+							<div class="col">
+								<input class="form-control" placeholder="Variedade" type="text" name="variety" required>
+							</div>
+						</div>
+
+						<div class="form-group form-row">
+							<label class="col-md-3 col-form-label">Época</label>
+							<div class="col">
+								<input class="form-control" placeholder="Época ideal" type="text" name="season" required>
 							</div>
 						</div>
 
 						<div class="form-group form-row align-items-center">
-							<label class="col-md-3 col-form-label">Imagem principal</label>
+							<label class="col-md-3 col-form-label">Imagem ilustrativa</label>
 							<div class="col">
 								<div class="dropzone form-control">
-									<div class="info"></div>
+									<div class="info text-muted"></div>
 								</div>
 							</div>
 						</div>
@@ -224,125 +198,45 @@
 
 
 
-<!-- ========================= SECTION CONTENT ========================= -->
-<section class="section-content padding-y bg">
-<div class="container">
+	<!-- ========================= SECTION CONTENT ========================= -->
+	<section class="section-content padding-y bg">
+		<div class="container">
 
-<div class="row justify-content-center">
-	<main class="col-md-9">
+			<div class="row justify-content-center">
+				<main class="col-md-9">
 
-<header class="border-bottom mb-4 pb-3">
-		<div class="form-inline">
-			<span class="mr-md-auto">A vender <b class="counter">3</b> produtos neste momento</span>
-			<button class="btn btn-primary mr-4" data-toggle="modal" data-target="#new"><i class="fas fa-plus mr-1"></i> Vender novo produto</button>
-			<div class="btn-group">
-				<a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="Vista de lista"> 
-					<i class="fa fa-bars"></i></a>
-				<a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="Vista de grelha"> 
-					<i class="fa fa-th"></i></a>
+					<header class="border-bottom mb-4 pb-3">
+						<div class="form-inline">
+							<span class="mr-md-auto">A vender <b id="product_counter">0</b> produtos neste momento</span>
+							<button class="btn btn-primary mr-4" data-toggle="modal" data-target="#new"><i class="fas fa-plus mr-1"></i> Vender novo produto</button>
+							<div class="btn-group">
+								<a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="Vista de lista"> <i class="fa fa-bars"></i></a>
+								<a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="Vista de grelha"> <i class="fa fa-th"></i></a>
+							</div>
+						</div>
+					</header><!-- sect-heading -->
+
+					<div class="row" id="sell"></div>
+
+					<div class="lead text-center my-5 py-5" id="empty">
+						<p>De momento não está a vender nenhum produto.</p>
+						<p>Clique no botão "Vender novo produto" para publicar os seus alimentos para venda!</p>
+					</div>
+
+					<nav class="mt-4 d-flex justify-content-center" aria-label="Page navigation sample">
+						<ul class="pagination" id="pagination" style="display: none;">
+							<li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item disabled"><a class="page-link" href="#">Seguinte</a></li>
+						</ul>
+					</nav>
+
+				</main> <!-- col.// -->
 			</div>
-		</div>
-</header><!-- sect-heading -->
 
-<div class="row">
-	<div class="col-md-4 remove_1">
-		<figure class="card card-product-grid">
-			<div class="img-wrap">
-				<a href="product">
-					<span class="badge badge-danger">PROMOÇÃO ATIVA</span><br>
-					<img src="/ams_g202/images/products/diospiro_persimmon.jpg">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height mb-4">
-						<p class="title">Dióspiro Persimmon</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,55€</span>
-							<del class="price-old">2,49€</del>
-							<small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-						<p class="my-2 text-danger small font-weight-bold"><i class="fas fa-exclamation-triangle mr-2"></i>Quantidade restante: 9 kg</p>
-					</div>
-				</a>
-				<div class="text-center">
-					<a href="#" class="btn btn-primary mr-3"><i class="fas fa-pencil-alt mr-2"></i> Editar</a>
-					<a href="#" class="btn btn-danger remove1"><i class="fas fa-trash-alt mr-2"></i> Remover</a>
-				</div>
-			</figcaption>
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4 remove_2">
-		<figure class="card card-product-grid">
-			<div class="img-wrap">
-				<a href="product">
-					<img src="/ams_g202/images/products/couve_portuguesa.jpg">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height mb-4">
-						<p class="title">Couve Portuguesa</p>
-						<div class="price-wrap mt-2">
-							<span class="price">1,49€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-						<p class="my-2 text-success small font-weight-bold">Quantidade restante: 21 kg</p>
-					</div>
-				</a>
-				<div class="text-center">
-					<a href="#" class="btn btn-primary mr-3"><i class="fas fa-pencil-alt mr-2"></i> Editar</a>
-					<a href="#" class="btn btn-danger remove2"><i class="fas fa-trash-alt mr-2"></i> Remover</a>
-				</div>
-			</figcaption>
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4 remove_3">
-		<figure class="card card-product-grid">
-			<div class="img-wrap">
-				<a href="product">
-					<img src="/ams_g202/images/products/maca_gala.jpg">
-					<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
-				</a>
-			</div> <!-- img-wrap.// -->
-			<figcaption class="info-wrap">
-				<a href="product">
-					<div class="fix-height mb-4">
-						<p class="title">Maça Gala de Alcobaça</p>
-						<div class="price-wrap mt-2">
-							<span class="price">2,10€</span><small class="text-muted"> /kg</small>
-						</div> <!-- price-wrap.// -->
-						<p class="my-2 text-warning small font-weight-bold">Quantidade restante: 14 kg</p>
-					</div>
-				</a>
-				<div class="text-center">
-					<a href="#" class="btn btn-primary mr-3"><i class="fas fa-pencil-alt mr-2"></i> Editar</a>
-					<a href="#" class="btn btn-danger remove3"><i class="fas fa-trash-alt mr-2"></i> Remover</a>
-				</div>
-			</figcaption>
-		</figure>
-	</div> <!-- col.// -->
-</div> <!-- row end.// -->
-
-
-<nav class="mt-4 d-flex justify-content-center" aria-label="Page navigation sample">
-  <ul class="pagination">
-    <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item disabled"><a class="page-link" href="#">Seguinte</a></li>
-  </ul>
-</nav>
-
-	</main> <!-- col.// -->
-
-</div>
-
-</div> <!-- container .//  -->
-</section>
-<!-- ========================= SECTION CONTENT END// ========================= -->
+		</div> <!-- container .//  -->
+	</section>
+	<!-- ========================= SECTION CONTENT END// ========================= -->
 
 	<footer class="section-footer border-top shadow pt-2 pb-2">
 		<div class="container">
@@ -358,17 +252,74 @@
 	</footer>
 
 	<script>
-		var feedback = function(res) {
-			if (res.success === true) {
-				var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
-				document.querySelector('.status').classList.add('mt-2');
-				document.querySelector('.status').innerHTML = 'Imagem: ' + '<br><input class="image-url form-control text-center mt-1 mb-2" readonly value=\"' + get_link + '\"/>' + '<img class="img rounded" alt="" src=\"' + get_link + '\"/>';
-			}
-		};
+		$(document).ready(function(){
+			var counter = 0; 	// Total of products that the producer is selling
 
-		new Imgur({
-			clientid: '4409588f10776f7',
-			callback: feedback
+			for (var key in products){
+				// Search through all the products in the list and check which products the producer is selling
+				if (products.hasOwnProperty(key) && products[key].producer == ecomarket_user.name){
+					$("#empty").hide();
+					$("#pagination").show();
+					$("#sell").append(`
+						<div class="col-lg-4 col-sm-6">
+							<figure class="card card-product-grid">
+								<div class="img-wrap">
+									<a href="#">
+										<span class="badge badge-warning">`+ products[key].new +`</span>
+										<span class="badge badge-danger">`+ products[key].sale +`</span>
+										<img src="`+ products[key].image +`" alt="">
+										<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Zoom</a>
+									</a>
+								</div>
+								<figcaption class="info-wrap">
+									<a href="#">
+										<p class="title mb-1">`+ products[key].name +`</p>
+										<div class="price-wrap mb-3">
+											<span class="price">`+ products[key].price +`€</span>
+											<del class="`+ (products[key].sale).toLowerCase().slice(0, 5) +` price-old" style="display: none;">`+ products[key].old_price +`€</del>
+											<small class="text-muted"> /kg</small>
+										</div>
+										<p class="my-3 text-muted small font-weight-bold">Quantidade restante: `+ products[key].quantity_left +` kg</p>
+									</a>
+									<div class="text-center">
+										<a href="#" class="btn btn-primary mr-3"><i class="fas fa-pencil-alt mr-2"></i> Editar</a>
+										<a href="#" class="btn btn-danger remove-button"><i class="fas fa-trash-alt mr-2"></i> Remover</a>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+					`);
+					counter++;
+				}
+			}
+
+			$("#product_counter").text(counter);
+
+			$(".remove-button").click(function(){
+				var sure = confirm("Tem a certeza que pretende parar de vender este produto?\nEsta ação é irreversível, terá de colocar novamente o produto à venda.");
+				if (sure){
+					$(this).closest("div.col-lg-4.col-sm-6").remove();
+					var count = $("b#product_counter").text();
+					$("b#product_counter").text(--count);
+					if ($("#product_counter").text()<1){
+						$("#empty").show();
+						$("#pagination").hide();
+					}
+				}
+			});
+
+			var feedback = function(res){
+				if (res.success === true){
+					var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
+					document.querySelector('.status').classList.add('mt-2');
+					document.querySelector('.status').innerHTML = 'Imagem: ' + '<br><input name="image" class="image-url form-control text-center mt-1 mb-2" readonly value=\"' + get_link + '\"/>' + '<img class="img rounded" alt="" src=\"' + get_link + '\"/>';
+				}
+			};
+
+			new Imgur({
+				clientid: '4409588f10776f7',
+				callback: feedback
+			});
 		});
 	</script>
 
