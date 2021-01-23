@@ -322,8 +322,15 @@
 			<div class="card-body">
 				<p class="alert alert-info">Esta compra aparecerá no extrato do seu cartão de crédito como "PAGAMENTO *ECOMARKET".</p>
 				<div class="form-inline">
-					<input type="text" minlength="16" maxlength="19" pattern="^[0-9]*$" title="Apenas dígitos" class="form-control mr-2" placeholder="XXXX XXXX XXXX XXXX" name="card_number" required>
-					<input type="text" minlength="5" maxlength="5" class="form-control mr-2" style="max-width: 100px" placeholder="MM/AA" name="card_expiration_date" required>
+					<div class="input-group mr-3">
+						<input type="text" minlength="16" maxlength="19" pattern="^[0-9]*$" title="Apenas dígitos" class="form-control" placeholder="XXXX XXXX XXXX XXXX" name="card_number">
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<i class="fab fa-cc-visa"></i> &nbsp; <i class="fab fa-cc-mastercard"></i> &nbsp; <i class="fab fa-cc-amex"></i>
+							</span>
+						</div>
+					</div>
+					<input type="text" minlength="5" maxlength="5" class="form-control mr-3" style="max-width: 100px" placeholder="MM/AA" name="card_expiration_date" required>
 					<input type="password" pattern="^[0-9]*$" title="Apenas dígitos" minlength="3" maxlength="3" class="form-control mr-2" style="max-width: 100px" placeholder="CVC" name="card_cvc" required>
 				</div>
 			</div> <!-- card body .// -->
@@ -416,35 +423,36 @@
 				cartHeaderTemplate: '<tr class="small text-uppercase"><th >Produto</th><th width="100">Quantidade</th><th width="120">Preço</th></tr>'
 			});
 			
-			// Update total value (on start)
+			// Update total value (when page loads)
 			var sum = Number($('.shipping').text().replace(/\s+/g, '').replace(/\,/g, '.').replace(/\€/g, '')) + Number($('.sc-cart-subtotal').text().replace(/\s+/g, '').replace(/\,/g, '.').replace(/\€/g, ''));
 			$('.total').text(sum.toFixed(2).replace(/\./g, ',') + '€');
-		});
-		$('input[name=delivery]').change(function(){
-			var delivery = $(this).val();
-			if(delivery=="normal"){
-				$('.delivery').text("Normal");
-				$('.shipping').text("3,00€");
-			} else if(delivery=="priority"){
-				$('.delivery').text("Prioritária");
-				$('.shipping').text("6,50€");
-			}
-			
-			// Update total value (on delivery method changes)
-			var sum = Number($('.shipping').text().replace(/\s+/g, '').replace(/\,/g, '.').replace(/\€/g, '')) + Number($('.sc-cart-subtotal').text().replace(/\s+/g, '').replace(/\,/g, '.').replace(/\€/g, ''));
-			$('.total').text(sum.toFixed(2).replace(/\./g, ',') + '€');
-		});
-		$('input[name=payment_option]').change(function(){
-			var payment_option = $(this).val();
-			if(payment_option=="paypal"){
-				$('.payment').text("Paypal");
-			} else if(payment_option=="mbway"){
-				$('.payment').text("MB Way");
-			} else if(payment_option=="bank"){
-				$('.payment').text("Multibanco");
-			} else if(payment_option=="card"){
-				$('.payment').text("Cartão de crédito");
-			}
+		
+			$('input[name=delivery]').change(function(){
+				var delivery = $(this).val();
+				if(delivery == "normal"){
+					$('.delivery').text("Normal");
+					$('.shipping').text("3,00€");
+				} else if(delivery == "priority"){
+					$('.delivery').text("Prioritária");
+					$('.shipping').text("6,50€");
+				}
+				
+				// Update total value (when delivery method changes)
+				var sum = Number($('.shipping').text().replace(/\s+/g, '').replace(/\,/g, '.').replace(/\€/g, '')) + Number($('.sc-cart-subtotal').text().replace(/\s+/g, '').replace(/\,/g, '.').replace(/\€/g, ''));
+				$('.total').text(sum.toFixed(2).replace(/\./g, ',') + '€');
+			});
+			$('input[name=payment_option]').change(function(){
+				var payment_option = $(this).val();
+				if(payment_option == "paypal"){
+					$('.payment').text("Paypal");
+				} else if(payment_option == "mbway"){
+					$('.payment').text("MB Way");
+				} else if(payment_option == "bank"){
+					$('.payment').text("Multibanco");
+				} else if(payment_option == "card"){
+					$('.payment').text("Cartão de crédito");
+				}
+			});
 		});
 	</script>
 
