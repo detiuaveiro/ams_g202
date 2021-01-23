@@ -1596,7 +1596,7 @@ a:hover{
   z-index: 1100;
 }
 
-.promo{
+.promo, .list-check.available, .list-dots.unavailable{
   display: initial !important;
 }
 
