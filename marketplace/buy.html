@@ -381,19 +381,26 @@
 											<small class="text-muted"> /kg</small>
 										</div>
 									</a>
-									<div class="form-inline mb-3">
+									<div class="form-inline mb-3 product`+ products[key].id +`">
 										<label class="small mr-2" for="quantity">Quantidade: </label>
 										<input class="form-control form-control-sm" id="quantity" name="product_quantity" min="1" max="9" value="1" type="number">
 										<label class="small ml-2" for="quantity">kg</label>
 									</div>
-									<button class="btn btn-block btn-primary sc-add-to-cart">Adicionar ao carrinho</button>
+									<button class="btn btn-block btn-primary sc-add-to-cart product`+ products[key].id +`">Adicionar ao carrinho</button>
 									<button class="btn btn-block btn-danger sc-remove-from-cart" style="display: none;">Remover do carrinho</button>
+									<button class="btn btn-block btn-primary unavailable product`+ products[key].id +`" style="display: none;" disabled>Indisponível</button>
 								</figcaption>
 								<input name="product_price" value="`+ (products[key].price).replace(",", ".") +`" type="hidden">
 								<input name="product_id" value="`+ products[key].id +`" type="hidden">
 							</figure>
 						</div>
 					`);
+					
+					if (products[key].quantity_left < 1){
+						$('.sc-add-to-cart.product'+ products[key].id).hide();
+						$('.form-inline.product'+ products[key].id).css("visibility", "hidden");
+						$('.unavailable.product'+ products[key].id).show();
+					}
 				}
 			}
 			
