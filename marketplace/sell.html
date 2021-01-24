@@ -112,7 +112,7 @@
 				</div>
 				<div class="modal-body">
 
-					<form class="my-3 mx-3">
+					<form class="my-3 mx-3" id="publish" action="">
 						<div class="form-group form-row">
 							<label class="col-md-3 col-form-label">Categoria</label>
 							<div class="col-sm-9 pt-1">
@@ -137,7 +137,7 @@
 						<div class="form-group form-row">
 							<label class="col-md-3 col-form-label">Preço</label>
 							<div class="col">
-								<input class="form-control" placeholder="Preço em €" type="number" min="0" max="20" step="0.01" name="price" required>
+								<input class="form-control" placeholder="Preço em €" type="number" min="0.01" max="20" step="0.01" name="price" required>
 							</div>
 						</div>
 
@@ -320,6 +320,58 @@
 			new Imgur({
 				clientid: '4409588f10776f7',
 				callback: feedback
+			});
+
+			$('#publish').on('submit', function(e){
+				if (typeof(Storage) !== "undefined"){
+					
+					if (products){
+						// Get values from the new product publish form
+						var category = $("#publish input[name=category]:checked").val();
+						var name = $("#publish input[name=name]").val();
+						var price = $("#publish input[name=price]").val().replace(".", ",");
+						var quantity_left = $("#publish input[name=quantity_left]").val();
+						var description = $("#publish input[name=description]").val();
+						var origin = $("#publish input[name=origin]").val();
+						var variety = $("#publish input[name=variety]").val();
+						var season = $("#publish input[name=season]").val();
+						if(!$("#publish input[name=image]").val()){
+							var image = "/ams_g202/images/products/product.jpg";
+						} else{
+							var image = $("#publish input[name=image]").val();
+						}
+						
+						// Add the newly created product
+						products.push(
+							{
+								id: (Object.keys(products).length + 1).toString(),
+								category: category,
+								new: "NOVIDADE",
+								sale: "",
+								old_price: "",
+								image: image,
+								name: name,
+								price: price,
+								producer: ecomarket_user.name,
+								quantity_left: quantity_left,
+								description: description,
+								origin: origin,
+								variety: variety,
+								season: season,
+								orders: "0",
+								feedback: []
+							}
+						);
+
+						// Update products data on the storage item
+						localStorage.setItem('ecomarket_products', JSON.stringify(products));
+					}
+
+				} else{
+					// Browser does not support web storage
+					window.location.replace("/ams_g202/marketplace/error");
+				}
+				
 			});
 		});
 	</script>
