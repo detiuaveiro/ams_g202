@@ -57,58 +57,58 @@
 	<section class="section-content padding-y bg" style="min-height:84vh">
 		<div class="container">
 
-	<!-- ============================ COMPONENT LOGIN   ================================= -->
-		<div class="card mx-auto" style="max-width: 380px; margin-top:30px;">
-			<div class="card-body">
-			<h4 class="card-title mb-4 pb-2">Iniciar sessão</h4>
-			<form id="login" action="">
-				<div class="form-group mt-4">
-					<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-fw fa-envelope"></i> </span>
+			<!-- ============================ COMPONENT LOGIN   ================================= -->
+			<div class="card mx-auto" style="max-width:380px; margin-top:30px;"  data-toggle="tooltip" data-html="true" data-placement="top" title="<p class='text-left'><b>Conta de demonstração de um produtor:</b><br><i class='fa fa-fw fa-envelope'></i> produtor@ua.pt<i class='fa fa-fw fa-lock ml-3'></i> produtor</p><p class='text-left'><b>Conta de demonstração de um cliente:</b><br><i class='fa fa-fw fa-envelope'></i> cliente@ua.pt <i class='fa fa-fw fa-lock ml-4'></i> cliente</p><p class='text-left text-muted'>(Em alternativa, poderá ainda criar novas contas)</p>">
+				<div class="card-body">
+					<h4 class="card-title mb-4 pb-2">Iniciar sessão</h4>
+					<form id="login" action="">
+						<div class="form-group mt-4">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <i class="fa fa-fw fa-envelope"></i> </span>
+								</div>
+								<input id="email" name="email" class="form-control" placeholder="Endereço de email" type="email" required>
+							</div>
 						</div>
-						<input id="email" name="email" class="form-control" placeholder="Endereço de email" type="email" required>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-fw fa-lock"></i> </span>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <i class="fa fa-fw fa-lock"></i> </span>
+								</div>
+								<input id="password" name="password" class="form-control rounded-right" placeholder="Palavra-passe" type="password" required>
+								<div class="invalid-feedback text-center mt-3">
+									As credenciais introduzidas são inválidas.
+								</div>
+							</div>
+							<div class="is-ready text-success small text-center mt-3 px-5" style="display: none;">
+								Por favor inicie sessão com as credenciais da conta que acabou de criar.
+							</div>
 						</div>
-						<input id="password" name="password" class="form-control rounded-right" placeholder="Palavra-passe" type="password" required>
-						<div class="invalid-feedback text-center mt-3">
-							As credenciais introduzidas são inválidas.
+						
+						<div class="form-group">
+							<a href="#" class="float-right"><u>Recuperar password</u></a> 
+							<label class="float-left custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" checked><div class="custom-control-label">Lembrar-me</div>
+							</label>
 						</div>
-					</div>
-					<div class="is-ready text-success small text-center mt-3 px-5" style="display: none;">
-						Por favor inicie sessão com as credenciais da conta que acabou de criar.
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<a href="#" class="float-right"><u>Recuperar password</u></a> 
-					<label class="float-left custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" checked><div class="custom-control-label">Lembrar-me</div>
-					</label>
-				</div>
-				<div class="form-group py-2">
-					<button type="submit" class="btn btn-primary btn-block">Iniciar sessão</button>
-				</div>
+						<div class="form-group py-2">
+							<button type="submit" class="btn btn-primary btn-block">Iniciar sessão</button>
+						</div>
 
-				<p class="text-center mt-4">ou inicie sessão através de</p>
-				<div class="text-center mb-4">
-					<a href="#" class="btn btn-icon rounded-circle btn-facebook"> <i class="fab fa-facebook-f"></i> </a>
-					<a href="#" class="btn btn-icon rounded-circle btn-google"> <i class="fab fa-google"></i> </a>
-					<a href="#" class="btn btn-icon rounded-circle btn-dark"> <i class="fab fa-apple"></i> </a>  
-				</div>
-			</form>
-			
-			<hr>
-			<p class="text-center mt-4">Ainda não tem uma conta? <a href="registration"><u>Crie uma aqui</u></a></p>
+						<p class="text-center mt-4">ou inicie sessão através de</p>
+						<div class="text-center mb-4">
+							<a href="#" class="btn btn-icon rounded-circle btn-facebook"> <i class="fab fa-facebook-f"></i> </a>
+							<a href="#" class="btn btn-icon rounded-circle btn-google"> <i class="fab fa-google"></i> </a>
+							<a href="#" class="btn btn-icon rounded-circle btn-dark"> <i class="fab fa-apple"></i> </a>  
+						</div>
+					</form>
+					
+					<hr>
+					<p class="text-center mt-4">Ainda não tem uma conta? <a href="registration"><u>Crie uma aqui</u></a></p>
 
+				</div>
 			</div>
-		</div>
-	<!-- ============================ COMPONENT LOGIN  END.// ================================= -->
+			<!-- ============================ COMPONENT LOGIN  END.// ================================= -->
 
 		</div>
 	</section>
