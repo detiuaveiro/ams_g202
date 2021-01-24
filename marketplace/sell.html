@@ -325,13 +325,14 @@
 			$('#publish').on('submit', function(e){
 				if (typeof(Storage) !== "undefined"){
 					
-					if (products){
+					if (products.reverse()){
 						// Get values from the new product publish form
+						var id = (Object.keys(products).length + 1).toString();
 						var category = $("#publish input[name=category]:checked").val();
 						var name = $("#publish input[name=name]").val();
-						var price = $("#publish input[name=price]").val().replace(".", ",");
-						var quantity_left = $("#publish input[name=quantity_left]").val();
-						var description = $("#publish input[name=description]").val();
+						var price = Number($("#publish input[name=price]").val()).toFixed(2).replace(/\./g, ',');
+						var quantity_left = Number($("#publish input[name=quantity_left]").val()).toString();
+						var description = $("#publish textarea[name=description]").val();
 						var origin = $("#publish input[name=origin]").val();
 						var variety = $("#publish input[name=variety]").val();
 						var season = $("#publish input[name=season]").val();
@@ -344,7 +345,7 @@
 						// Add the newly created product
 						products.push(
 							{
-								id: (Object.keys(products).length + 1).toString(),
+								id: id,
 								category: category,
 								new: "NOVIDADE",
 								sale: "",
